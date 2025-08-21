@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2s linear; 
+}
+
+html {
+    font-size: 62.5%;
+    overflow: auto; /* Changed from overflow: hidden */
+    padding-top: 0;
+    scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 6rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+.menu-nav__item {
+    display: flex;                /* Use flexbox for layout */
+    align-items: center;         /* Center align items vertically */
+    font-size: 1.6rem;           /* Font size for the links */
+    color: #fff;                 /* Text color */
+}
+
+.menu-nav__link {
+    text-decoration: none;       /* Remove underline from links */
+    color: inherit;              /* Inherit color from parent */
+    margin: 0 1rem;             /* Horizontal spacing between links */
+    transition: color 0.3s;      /* Smooth color transition on hover */
+}
+
+.menu-nav__link:hover {
+    color: var(--main-color);    /* Change color on hover */
+}
+
+#slash {
+    color: var(--main-color);     /* Color for the slash separator */
+    margin: 0 1rem;               /* Horizontal spacing around the slash */
+}
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+    transition: right .3s ease; 
+}
+
+.header .cart-items-container.active {
+    right: 0;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 5rem; 
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.cart-items-container .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../image/sign-in-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 { 
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p { 
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+}
+.footer {
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem; 
+    color: #fff;
+    border: var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .credit {
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credit span{
+    color: var(--main-color);
+}
+
+.create_btn:hover {
+    background-color: rgb(68, 64, 64); 
+}
+nav.category {
+    background-color: var(--bg); 
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    text-align: center; 
+    border-bottom: var(--border); 
+    position: sticky; 
+    top: 0;
+    z-index: 100; 
+}
+
+/* navigation links */
+nav.category a {
+    font-size: 1.8rem;
+    color: #ffd19a; 
+    text-decoration: none; 
+    margin: 0 1.5rem; 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Hover effect for the links */
+nav.category a:hover {
+    background-color: var(--main-color); 
+    color: var(--black);
+}
+
+
+nav.category a.active {
+    background-color: var(--main-color); 
+    color: var(--black); 
+}
+
+.menu .box-container .btn{
+    background: var(--main-color);
+    color: #2e1700;
+    font-size: 1.5rem;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+
+}
+
+.menu .box-container .box img{
+    height: 20rem;
+
+    width: 20rem;   
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.menu .box-container .box h3{
+    color: antiquewhite;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box span{
+    color: rgb(196, 155, 103);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.menu .box-container .box:hover{
+    background: #f2e8df;
+
+}
+
+.menu .box-container .box:hover > *{
+    color: var(--black);
+}
+
+.food-box{
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 8 1px 4px rgba(255,255,255,.3);
+    border-radius: 3px;
+}
+
+.pic{
+    overflow: hidden;
+}
+
+.pic :hover{
+    transform: scale(1.5);
+}
+
+.food-img{
+    transition: 0.4s;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+.food-title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.price{
+    
+    font-size: 2rem;
+    font-weight: 500;
+}
+#cart {
+    font-size: 2.5rem;  /* Size of the icon */
+    color: #110909;        /* Icon color */
+    cursor: pointer;    /* Change cursor to pointer on hover */
+    margin-left: 2rem;  /* Adds some space to the left */
+    transition: color 0.3s;  /* Smooth transition effect for color change */
+}
+
+#cart:hover {
+    color: var(--main-color); /* Change color on hover */
+}
+
+.cart1{
+    position:fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.cart1-active{
+    right: 0;
+    transition: 0.5s;
+}
+.cart_title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 2px solid;
+    padding: 5px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.price-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-food-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #110909;
+    font-weight: 500;
+}
+
+.cart-price{
+    font-weight: 600;
+}
+
+.cart-quantity{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove {
+    font-size: 1.5rem; /* Size of the trash icon */
+    color: #ff0000; /* Color of the icon (red in this case) */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition effect for color change */
+    margin-left: 1rem; /* Optional: Add some spacing around the icon */
+}
+
+.cart-remove:hover {
+    color: #cc0000; /* Darker shade of red on hover */
+}
+
+
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem; /* Space above the total section */
+    padding: 1rem;
+    background-color: #f9f9f9; /* Light background color */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: #333; /* Dark text color */
+}
+
+.total_title {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.total_p {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #d3ad7f; /* Accent color */
+}
+
+.btn_buy {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem; /* Space above the button */
+    background-color: #d3ad7f; /* Accent color */
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.btn_buy:hover {
+    background-color: #b8936f; /* Darker shade on hover */
+    letter-spacing: 0.05rem; /* Slight text spacing on hover */
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333; /* Icon color */
+    cursor: pointer;
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+#close:hover {
+    color: #d3ad7f; /* Change color on hover to match theme */
+}
+
+
