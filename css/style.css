@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2s linear; 
+}
+
+html {
+    font-size: 62.5%;
+    overflow: auto; /* Changed from overflow: hidden */
+    padding-top: 0;
+    scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 6rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+.menu-nav__item {
+    display: flex;                /* Use flexbox for layout */
+    align-items: center;         /* Center align items vertically */
+    font-size: 1.6rem;           /* Font size for the links */
+    color: #fff;                 /* Text color */
+}
+
+.menu-nav__link {
+    text-decoration: none;       /* Remove underline from links */
+    color: inherit;              /* Inherit color from parent */
+    margin: 0 1rem;             /* Horizontal spacing between links */
+    transition: color 0.3s;      /* Smooth color transition on hover */
+}
+
+.menu-nav__link:hover {
+    color: var(--main-color);    /* Change color on hover */
+}
+
+#slash {
+    color: var(--main-color);     /* Color for the slash separator */
+    margin: 0 1rem;               /* Horizontal spacing around the slash */
+}
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+    transition: right .3s ease; 
+}
+
+.header .cart-items-container.active {
+    right: 0;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 5rem; 
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.cart-items-container .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../image/sign-in-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 { 
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p { 
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+}
+.footer {
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem; 
+    color: #fff;
+    border: var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .credit {
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credit span{
+    color: var(--main-color);
+}
+/* login */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('image/bg.png') no-repeat center center;
+    background-size: cover;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    
+}
+.form {
+    max-width: 500px;
+    width: 100%;
+    padding: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+.head {
+    font-size: 3.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.input-box {
+    margin-bottom: 2rem; 
+}
+.input-box label {
+    display: block;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.input-box input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    
+}
+.input-box input:focus {
+    border-color: #d3ad7f; 
+    outline: none;
+}
+.sign_btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgb(129, 118, 118); 
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+.sign_btn:hover {
+    background-color: rgb(68, 64, 64); 
+}
+.pa {
+    text-align: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-size: 15px;
+}
+.a {
+    text-align: center;
+    font-size: 15px;
+}
+.pa a {
+    color: #555;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.pa a:hover {
+    text-decoration: underline;
+}
+.para {
+    text-align: center;
+    color: #555; 
+    font-size: 15px;
+}
+.create_btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgb(129, 118, 118); 
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+.create_btn:hover {
+    background-color: rgb(68, 64, 64); 
+}
+nav.category {
+    background-color: var(--bg); 
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    text-align: center; 
+    border-bottom: var(--border); 
+    position: sticky; 
+    top: 0;
+    z-index: 100; 
+}
+
+/* navigation links */
+nav.category a {
+    font-size: 1.8rem;
+    color: #ffd19a; 
+    text-decoration: none; 
+    margin: 0 1.5rem; 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Hover effect for the links */
+nav.category a:hover {
+    background-color: var(--main-color); 
+    color: var(--black);
+}
+
+
+nav.category a.active {
+    background-color: var(--main-color); 
+    color: var(--black); 
+}
+
+.menu .box-container .btn{
+    background: var(--main-color);
+    color: #2e1700;
+    font-size: 1.5rem;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+
+}
+
+.menu .box-container .box img{
+    height: 20rem;
+
+    width: 20rem;   
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.menu .box-container .box h3{
+    color: antiquewhite;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box span{
+    color: rgb(196, 155, 103);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.menu .box-container .box:hover{
+    background: #f2e8df;
+
+}
+
+.menu .box-container .box:hover > *{
+    color: var(--black);
+}
+/* Welcome Section Styles */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: var(--bg); /* Use your existing background variable */
+}
+
+/* Picture Area */
+.pic-area {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pic-area-text h2 {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.home__name {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.logo-first {
+    color: var(--main-color);
+}
+
+.logo-last {
+    color: #fff;
+}
+
+.pic-area h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.btn-order {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-order:hover {
+    background: #b59466; /* Darker shade for hover effect */
+}
+/* Main Area */
+.main-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    opacity: 0; /* Start hidden for fade-in effect */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+/* Section Area */
+.section-area {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically on smaller screens */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center justify */
+    padding: 2rem;
+    background: #1a1a1a; /* Dark background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+/* Hover effect for section areas */
+.section-area:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Heading Styling */
+.section-area h1 {
+    color: var(--main-color);
+    font-size: 4rem; /* Adjusted for better scaling */
+    margin-bottom: 1rem;
+}
+
+/* Text Box Styling */
+.box-text {
+    flex: 1;
+    padding: 1rem;
+    text-align: center; /* Center text for better presentation */
+}
+
+/* Image Box Styling */
+.box-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image Styling */
+.box-img img {
+    max-width: 80%; /* Adjust width for better responsiveness */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Zoom effect on image hover */
+.box-img img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 2.5rem; /* Increased font size for better readability */
+    line-height: 1.6; /* Improved line height */
+    color: #e0e0e0; /* Lighter text color for contrast */
+    padding: 1rem 0; /* Padding for spacing */
+    text-align: justify; /* Justify text for better layout */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start hidden */
+    }
+    100% {
+        opacity: 1; /* Fade in */
+    }
+}
+
