@@ -169,36 +169,78 @@ cartCloseBtn.addEventListener("click", function () {
 });
 
 // Shopping Cart Adding Items to Cart
-const total = document.querySelector(".total");
-let totalAmount;
 
-// Establish totalAmount in local storage if not there already.
-if (!localStorage.getItem("total")) {
-  localStorage.setItem("total", "0");
-} else {
-  totalAmount = parseFloat(localStorage.getItem("total"));
-  updateTotal(0);
-}
+// Generic Cart Functionality (run after DOM is loaded)
+document.addEventListener('DOMContentLoaded', function() {
+  const cartItemsContainer = document.querySelector('.cart-items-container');
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-/**
- * Updates total in the local storage and class "total" in the DOM
- * @param {Float} moneyChange
- */
-function updateTotal(moneyChange) {
-  totalAmount += moneyChange;
-  localStorage.setItem("total", totalAmount.toString());
-  if (totalAmount > 1) {
-    total.innerHTML = `<span class="span-primary">Total Amount:</span> $${totalAmount.toFixed(
-      2
-    )}`;
-  } else {
-    total.innerHTML = `<br>
-      <br>
-      Your Shopping Cart is empty. <br>
-        Add items to cart by hovering over / tapping on the images of products
-    on the Menu page.`;
+  function getCart() {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
   }
-}
+
+  function setCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  function addItemToCart(itemName, price, imgSrc) {
+    let cart = getCart();
+    const existing = cart.find(item => item.name === itemName);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ name: itemName, price: price, img: imgSrc, qty: 1 });
+    }
+    setCart(cart);
+    renderCart();
+  }
+
+  function renderCart() {
+    let cart = getCart();
+    cartItemsContainer.innerHTML = '';
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+        <span class="fas fa-times" data-remove="${item.name}"></span>
+        <img src="${item.img}" alt="${item.name}">
+        <div class="content">
+          <h3>${item.name} <span>x${item.qty}</span></h3>
+          <div class="price">${item.price}</div>
+        </div>
+      `;
+      cartItemsContainer.appendChild(div);
+    });
+    // Remove item event
+    cartItemsContainer.querySelectorAll('.fa-times').forEach(btn => {
+      btn.onclick = function() {
+        removeItemFromCart(this.getAttribute('data-remove'));
+      };
+    });
+  }
+
+  function removeItemFromCart(itemName) {
+    let cart = getCart();
+    cart = cart.filter(item => item.name !== itemName);
+    setCart(cart);
+    renderCart();
+  }
+
+  addToCartButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const box = btn.closest('.box');
+      const itemName = btn.getAttribute('data-item');
+      const price = box.querySelector('.price').childNodes[0].nodeValue.trim();
+      const imgSrc = box.querySelector('img').getAttribute('src');
+      addItemToCart(itemName, price, imgSrc);
+    });
+  });
+
+  // Initial render
+  renderCart();
+});
 
 /* Item displays in the DOM */
 
