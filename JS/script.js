@@ -170,75 +170,77 @@ cartCloseBtn.addEventListener("click", function () {
 
 // Shopping Cart Adding Items to Cart
 
-// Generic Cart Functionality
-const cartItemsContainer = document.querySelector('.cart-items-container');
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
+// Generic Cart Functionality (run after DOM is loaded)
+document.addEventListener('DOMContentLoaded', function() {
+  const cartItemsContainer = document.querySelector('.cart-items-container');
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-function getCart() {
-  const cart = localStorage.getItem('cart');
-  return cart ? JSON.parse(cart) : [];
-}
-
-function setCart(cart) {
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-function addItemToCart(itemName, price, imgSrc) {
-  let cart = getCart();
-  const existing = cart.find(item => item.name === itemName);
-  if (existing) {
-    existing.qty += 1;
-  } else {
-    cart.push({ name: itemName, price: price, img: imgSrc, qty: 1 });
+  function getCart() {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
   }
-  setCart(cart);
+
+  function setCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  function addItemToCart(itemName, price, imgSrc) {
+    let cart = getCart();
+    const existing = cart.find(item => item.name === itemName);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ name: itemName, price: price, img: imgSrc, qty: 1 });
+    }
+    setCart(cart);
+    renderCart();
+  }
+
+  function renderCart() {
+    let cart = getCart();
+    cartItemsContainer.innerHTML = '';
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+        <span class="fas fa-times" data-remove="${item.name}"></span>
+        <img src="${item.img}" alt="${item.name}">
+        <div class="content">
+          <h3>${item.name} <span>x${item.qty}</span></h3>
+          <div class="price">${item.price}</div>
+        </div>
+      `;
+      cartItemsContainer.appendChild(div);
+    });
+    // Remove item event
+    cartItemsContainer.querySelectorAll('.fa-times').forEach(btn => {
+      btn.onclick = function() {
+        removeItemFromCart(this.getAttribute('data-remove'));
+      };
+    });
+  }
+
+  function removeItemFromCart(itemName) {
+    let cart = getCart();
+    cart = cart.filter(item => item.name !== itemName);
+    setCart(cart);
+    renderCart();
+  }
+
+  addToCartButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const box = btn.closest('.box');
+      const itemName = btn.getAttribute('data-item');
+      const price = box.querySelector('.price').childNodes[0].nodeValue.trim();
+      const imgSrc = box.querySelector('img').getAttribute('src');
+      addItemToCart(itemName, price, imgSrc);
+    });
+  });
+
+  // Initial render
   renderCart();
-}
-
-function renderCart() {
-  let cart = getCart();
-  cartItemsContainer.innerHTML = '';
-  cart.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'cart-item';
-    div.innerHTML = `
-      <span class="fas fa-times" data-remove="${item.name}"></span>
-      <img src="${item.img}" alt="${item.name}">
-      <div class="content">
-        <h3>${item.name} <span>x${item.qty}</span></h3>
-        <div class="price">${item.price}</div>
-      </div>
-    `;
-    cartItemsContainer.appendChild(div);
-  });
-  // Remove item event
-  cartItemsContainer.querySelectorAll('.fa-times').forEach(btn => {
-    btn.onclick = function() {
-      removeItemFromCart(this.getAttribute('data-remove'));
-    };
-  });
-}
-
-function removeItemFromCart(itemName) {
-  let cart = getCart();
-  cart = cart.filter(item => item.name !== itemName);
-  setCart(cart);
-  renderCart();
-}
-
-addToCartButtons.forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const box = btn.closest('.box');
-    const itemName = btn.getAttribute('data-item');
-    const price = box.querySelector('.price').childNodes[0].nodeValue.trim();
-    const imgSrc = box.querySelector('img').getAttribute('src');
-    addItemToCart(itemName, price, imgSrc);
-  });
 });
-
-// Initial render
-renderCart();
 
 /* Item displays in the DOM */
 
