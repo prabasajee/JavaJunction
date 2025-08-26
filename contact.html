@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact-new.css">
 </head>
 <body>
     <header class="header">
@@ -66,57 +66,84 @@
         </div>
     </header>
     
- 
-
-<!-- about start-->
-<section class="store_info" id="store_info">
-    <div class="container1">
-        <h1>Contact Us</h1>
-        <hr class="divider">
-        
-        <p class="p">Tell us about your experience!</p>
-
-        <form class="f">
-            <label for="name"></label>
-            <input type="text" id="Name" placeholder="Name" name="name" required>
-
-            <input type="email" placeholder="Email" id="Email" name="email" required>
-
-            <label for="message"></label>
-            <textarea id="message" placeholder="Message"></textarea>
-
-            <input type="submit" value="Send">
-        </form> 
-    </div>
-
     
-
-        <p class="title">True Baristas Coffee</p>
-        <p class="t2">1300 Brickell Avenue, Miami, Florida 33131, United States</p>
-
-        <!-- Google Map Embed -->
-        <div style="width:100%;max-width:600px;margin:20px auto;">
-            <iframe
-                src="https://www.google.com/maps?q=1300+Brickell+Avenue,+Miami,+Florida+33131,+United+States&output=embed"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- Contact Section Start -->
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="section-header">
+            <h1 class="heading">Contact <span>Us</span></h1>
+            <p class="subheading">Get in touch with us</p>
         </div>
+        
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form class="form">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Your Name" name="name" required>
+                        <input type="email" placeholder="Your Email" id="email" name="email" required>
+                    </div>
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
 
-        <h2 class="t3">Hours of Operation</h2>
-        <ul class="u">
-                <li>Mon 07:30 am - 03:00 pm</li>
-                <li>Tue 07:30 am - 03:00 pm</li>
-        <li>Wed 07:30 am - 03:00 pm</li>
-        <li>Thu 07:30 am - 03:00 pm</li>
-        <li>Fri 07:30 am - 03:00 pm</li>
-        <li>Sat 08:30 am - 04:00 pm</li>
-        <li>Sun 08:30 am - 04:00 pm</li>
-    </ul>
-
-    <p class="pargrap">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
-    
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.3022251120487!2d79.98416097593618!3d9.74044669035213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe53d4f5f553c9%3A0x54a236361ba8edaa!2sNammakadai%20online%20mart!5e0!3m2!1sen!2slk!4v1722537626229!5m2!1sen!2slk" 
-    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Visit Our Coffee Shop</h3>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>True Baristas Coffee</h4>
+                        <p>1300 Brickell Avenue<br>Miami, Florida 33131<br>United States</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (305) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@truebaristascoffee.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours of Operation</h4>
+                        <div class="hours">
+                            <p>Mon - Fri: 07:30 AM - 03:00 PM</p>
+                            <p>Sat - Sun: 08:30 AM - 04:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Google Map -->
+        <div class="map-container">
+            <h3>Find Us</h3>
+            <iframe 
+                src="https://www.google.com/maps?q=1300+Brickell+Avenue,+Miami,+Florida+33131,+United+States&output=embed"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
 </section>
 
 
