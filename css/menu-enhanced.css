@@ -878,3 +878,48 @@
         transform: translate3d(0, -2px, 0);
     }
 }
+
+/* Additional Enhancement Styles */
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(211,173,127,0.2);
+    border-color: rgba(211,173,127,0.3);
+}
+
+.item-badge:hover {
+    animation: pulse 2s infinite;
+}
+
+.quick-view-btn:hover,
+.favorite-btn:hover {
+    animation: bounce 1s;
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(45deg, var(--main-color), #f4d03f) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(211,173,127,0.4);
+}
+
+.category-tab:hover {
+    animation: pulse 1.5s ease-in-out;
+}
+
+/* Improved scrollbar for modal */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #f4d03f;
+}
