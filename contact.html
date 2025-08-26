@@ -9,60 +9,132 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">
-            <img src="../image/logo.png" alt="Logo">
-        </a>
-        <nav class="navbar">
-            <a href="home.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="product.html">Products</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-   
-        <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div> 
-            <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <a href="#" class="logo">
+                    <img src="image/logo.png" alt="JavaJunction Logo">
+                    <span class="logo-text">JavaJunction</span>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                            <i class="fas fa-coffee"></i>
+                            <span>Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="product.html" class="nav-link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service.html" class="nav-link">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">
+                            <i class="fas fa-phone"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-container">
+                    <div class="search-btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search-form" id="search-form">
+                        <input type="search" id="search-box" placeholder="Search coffee, products...">
+                        <button type="submit" class="search-submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="cart-container">
+                    <div class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="cart-dropdown" id="cart-dropdown">
+                        <div class="cart-header">
+                            <h3>Shopping Cart</h3>
+                            <span class="cart-total">Total: Rs 0</span>
+                        </div>
+                        <div class="cart-items-container">
+                            <!-- Cart items will be populated by JavaScript -->
+                        </div>
+                        <div class="cart-footer">
+                            <a href="#" class="btn checkout-btn">Checkout Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Account -->
+                <div class="user-container">
+                    <div class="user-btn" id="user-btn">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Welcome, Guest!</span>
+                        </div>
+                        <ul class="user-menu">
+                            <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                            <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                            <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                            <li><a href="#"><i class="fas fa-history"></i> Order History</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-btn" id="menu-btn">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </div>
+            </div>
         </div>
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="search here..">
-            <label for="search-box" class="fas fa-search"></label>
-        </div>
-        <div class="cart-items-container">
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="image/p3.png" alt="">
-                <div class="content">
-                    <h3>cart item 01</h3>
-                    <div class="price">rs 1500</div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <div class="mobile-nav-header">
+                    <img src="image/logo.png" alt="JavaJunction">
+                    <h2>JavaJunction</h2>
                 </div>
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="menu.html"><i class="fas fa-coffee"></i> Menu</a></li>
+                    <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+                    <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                    <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                </ul>
             </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="image/p4.png" alt="">
-                <div class="content">
-                    <h3>cart item 02</h3>
-                    <div class="price">rs 1700</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="image/p5.png" alt="">
-                <div class="content">
-                    <h3>cart item 03</h3>
-                    <div class="price">rs 1700</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="image/p1.png" alt="">
-                <div class="content">
-                    <h3>cart item 04</h3>
-                    <div class="price">rs 1400</div>
-                </div>
-            </div>
-            <a href="#" class="btn">Checkout now</a>
         </div>
     </header>
     
