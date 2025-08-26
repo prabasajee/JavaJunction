@@ -317,34 +317,31 @@ section {
     padding: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
 .title {
-    font-size: 24px; /* Larger font size for the title */
-    font-weight: bold; /* Make title bold */
-    margin-top: 20px; /* Space above the title */
-    margin-bottom: 10px; /* Space below the title */
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 30px auto 10px auto;
     color: #ccc;
-    position: relative;
-    bottom: 300px;
-    left: 900px;
+    text-align: center;
+    position: static;
 }
 
 .t2 {
-    font-size: 20px; /* Slightly smaller font size for the address */
-    margin-bottom: 20px; 
+    font-size: 2rem;
+    margin-bottom: 20px;
     color: #ccc;
-    position: relative;
-    bottom: 290px;
-    left: 900px;
+    text-align: center;
+    position: static;
 }
 
 .t3 {
     color: #f00;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 10px;
-    position: relative;
-    bottom: 300px;
-    left: 900px;
-    font-size: 20px;
+    font-size: 2rem;
+    text-align: center;
+    position: static;
 }
 
 
@@ -393,19 +390,20 @@ form input[type="submit"]:hover {
 
 /* Hours of Operation Styling */
 .container1 ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
     padding: 0;
     color: #ccc;
-    position: relative;
-    bottom: 300px;
-    left: 100px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    position: static;
 }
 
 .container1 ul li {
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 2rem;
     color: #ccc;
-    /* Removed unnecessary positioning */
+    display: inline-block;
+    margin-right: 15px;
 }
 
 
