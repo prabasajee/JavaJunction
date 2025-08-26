@@ -300,6 +300,23 @@ section {
 
 
 /* Paragraphs with specific classes */
+
+/* Google Map Embed Styling */
+.store_info iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    max-width: 100%;
+}
+
+.store_info div[style*="max-width:600px"] {
+    margin: 30px auto 10px auto;
+    background: #222;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 .title {
     font-size: 24px; /* Larger font size for the title */
     font-weight: bold; /* Make title bold */
