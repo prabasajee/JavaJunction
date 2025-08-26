@@ -3,314 +3,611 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
+    <title>Menu - JavaJunction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/menu.css" />
-    <link rel="icon" href="../image/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="icon" href="image/icons8 (2).png" />
 </head>
 <body>
+    <!-- Enhanced Header -->
     <header class="header">
-        <a href="#" class="logo">
-            <img src="../image/logo.png" alt="Logo">
-        </a>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="product.html">Products</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-   
-        <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div> 
-            <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <img src="image/logo.png" alt="JavaJunction Logo">
+                    <span class="logo-text">JavaJunction</span>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link active">
+                            <i class="fas fa-coffee"></i>
+                            <span>Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="product.html" class="nav-link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service.html" class="nav-link">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-container">
+                    <div class="search-btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search-form" id="search-form">
+                        <input type="search" id="search-box" placeholder="Search menu items...">
+                        <button type="submit" class="search-submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="cart-container">
+                    <div class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="cart-dropdown" id="cart-dropdown">
+                        <div class="cart-header">
+                            <h3>Shopping Cart</h3>
+                            <span class="cart-total">Total: Rs 0</span>
+                        </div>
+                        <div class="cart-items-container">
+                            <!-- Cart items will be populated by JavaScript -->
+                        </div>
+                        <div class="cart-footer">
+                            <a href="#" class="btn checkout-btn">Checkout Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Account -->
+                <div class="user-container">
+                    <div class="user-btn" id="user-btn">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Welcome, Guest!</span>
+                        </div>
+                        <ul class="user-menu">
+                            <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                            <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                            <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                            <li><a href="#"><i class="fas fa-history"></i> Order History</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-btn" id="menu-btn">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </div>
+            </div>
         </div>
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="search here..">
-            <label for="search-box" class="fas fa-search"></label>
-        </div>
-        <div class="cart-items-container">
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p3.png" alt="">
-                <div class="content">
-                    <h3>cart item 01</h3>
-                    <div class="price">rs 1500</div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <div class="mobile-nav-header">
+                    <img src="image/logo.png" alt="JavaJunction">
+                    <h2>JavaJunction</h2>
                 </div>
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="menu.html"><i class="fas fa-coffee"></i> Menu</a></li>
+                    <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+                    <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                    <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                </ul>
             </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p4.png" alt="">
-                <div class="content">
-                    <h3>cart item 02</h3>
-                    <div class="price">rs 1700</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p5.png" alt="">
-                <div class="content">
-                    <h3>cart item 03</h3>
-                    <div class="price">rs 1700</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p1.png" alt="">
-                <div class="content">
-                    <h3>cart item 04</h3>
-                    <div class="price">rs 1400</div>
-                </div>
-            </div>
-            <a href="#" class="btn">Checkout now</a>
         </div>
     </header>
     
-<!-- menu start
-<section id="menu" class="menu">
-    <h1 class="heading">our <span>menu</span></h1>
-    <div class="box-container">
-        <div class="box">
-            <img src="image/espresso-1.jpg" alt="">
-            <h3>Espresso</h3>
-            <div class="price">Rs 1500 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+    <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <div class="hero-badge">
+                <span><i class="fas fa-coffee"></i> Fresh & Delicious</span>
+            </div>
+            <h1 class="menu-hero-title">Our Coffee <span>Menu</span></h1>
+            <p class="menu-hero-description">
+                Discover our carefully crafted selection of premium coffees, 
+                delicious snacks, and artisanal treats made fresh daily.
+            </p>
+            <div class="menu-stats">
+                <div class="stat-item">
+                    <i class="fas fa-coffee"></i>
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Coffee Varieties</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Fresh Snacks</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-utensils"></i>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Food Items</span>
+                </div>
+            </div>
         </div>
-        <div class="box">
-            <img src="image/latte.webp" alt="">
-            <h3>latte</h3>
-            <div class="price">Rs 1500 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+        <div class="menu-hero-visual">
+            <div class="floating-coffee-beans">
+                <i class="fas fa-coffee bean-1"></i>
+                <i class="fas fa-coffee bean-2"></i>
+                <i class="fas fa-coffee bean-3"></i>
+            </div>
         </div>
-        <div class="box">
-            <img src="image/ristretto.jpg" alt="">
-            <h3>ristretto</h3>
-            <div class="price">Rs 1500 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+    </section>
+
+    <!-- Enhanced Menu Section -->
+    <section class="menu" id="menu">
+        <div class="menu-container">
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <h2 class="filter-title">Browse by Category</h2>
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">
+                        <i class="fas fa-th-large"></i>
+                        <span>All Items</span>
+                        <span class="item-count" id="count-all">0</span>
+                    </button>
+                    <button class="category-tab" data-category="beverages">
+                        <i class="fas fa-coffee"></i>
+                        <span>Beverages</span>
+                        <span class="item-count" id="count-beverages">0</span>
+                    </button>
+                    <button class="category-tab" data-category="snacks">
+                        <i class="fas fa-cookie-bite"></i>
+                        <span>Snacks</span>
+                        <span class="item-count" id="count-snacks">0</span>
+                    </button>
+                    <button class="category-tab" data-category="fooditems">
+                        <i class="fas fa-utensils"></i>
+                        <span>Food Items</span>
+                        <span class="item-count" id="count-fooditems">0</span>
+                    </button>
+                    <button class="category-tab" data-category="addons">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add-ons</span>
+                        <span class="item-count" id="count-addons">0</span>
+                    </button>
+                    <button class="category-tab" data-category="otheritems">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>Others</span>
+                        <span class="item-count" id="count-otheritems">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Enhanced Menu Items -->
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="image/Hot Mocha Latte.webp" alt="Hot Mocha Latte">
+                        <div class="item-badge">
+                            <i class="fas fa-fire"></i>
+                            <span>Hot</span>
+                        </div>
+                        <div class="item-overlay">
+                            <button class="quick-view-btn" data-item="Hot Mocha Latte">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <h3 class="item-name">Hot Mocha Latte</h3>
+                        <p class="item-description">Rich espresso with steamed milk and chocolate</p>
+                        <div class="item-details">
+                            <span class="item-size"><i class="fas fa-coffee"></i> 12oz</span>
+                            <span class="item-calories"><i class="fas fa-fire"></i> 250 cal</span>
+                        </div>
+                        <div class="item-footer">
+                            <div class="price-section">
+                                <span class="current-price">Rs 480</span>
+                                <span class="original-price">Rs 600</span>
+                                <span class="discount">20% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="Hot Mocha Latte" data-price="480" data-image="Hot Mocha Latte.webp">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="image/Salted Caramel Macchiato.jpeg" alt="Salted Caramel Macchiato">
+                        <div class="item-badge premium">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium</span>
+                        </div>
+                        <div class="item-overlay">
+                            <button class="quick-view-btn" data-item="Salted Caramel Macchiato">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <h3 class="item-name">Salted Caramel Macchiato</h3>
+                        <p class="item-description">Espresso with caramel syrup and sea salt foam</p>
+                        <div class="item-details">
+                            <span class="item-size"><i class="fas fa-coffee"></i> 16oz</span>
+                            <span class="item-calories"><i class="fas fa-fire"></i> 320 cal</span>
+                        </div>
+                        <div class="item-footer">
+                            <div class="price-section">
+                                <span class="current-price">Rs 520</span>
+                                <span class="original-price">Rs 650</span>
+                                <span class="discount">20% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="Salted Caramel Macchiato" data-price="520" data-image="Salted Caramel Macchiato.jpeg">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="image/Iced Mocha.jpeg" alt="Iced Mocha">
+                        <div class="item-badge cold">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Cold</span>
+                        </div>
+                        <div class="item-overlay">
+                            <button class="quick-view-btn" data-item="Iced Mocha">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <h3 class="item-name">Iced Mocha</h3>
+                        <p class="item-description">Chilled espresso with chocolate and ice</p>
+                        <div class="item-details">
+                            <span class="item-size"><i class="fas fa-coffee"></i> 16oz</span>
+                            <span class="item-calories"><i class="fas fa-fire"></i> 280 cal</span>
+                        </div>
+                        <div class="item-footer">
+                            <div class="price-section">
+                                <span class="current-price">Rs 450</span>
+                                <span class="original-price">Rs 550</span>
+                                <span class="discount">18% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="Iced Mocha" data-price="450" data-image="Iced Mocha.jpeg">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="image/Iced Americano.jpeg" alt="Iced Americano">
+                        <div class="item-badge cold">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Cold</span>
+                        </div>
+                        <div class="item-overlay">
+                            <button class="quick-view-btn" data-item="Iced Americano">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <h3 class="item-name">Iced Americano</h3>
+                        <p class="item-description">Bold espresso shots over ice with water</p>
+                        <div class="item-details">
+                            <span class="item-size"><i class="fas fa-coffee"></i> 16oz</span>
+                            <span class="item-calories"><i class="fas fa-fire"></i> 15 cal</span>
+                        </div>
+                        <div class="item-footer">
+                            <div class="price-section">
+                                <span class="current-price">Rs 380</span>
+                                <span class="original-price">Rs 450</span>
+                                <span class="discount">15% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="Iced Americano" data-price="380" data-image="Iced Americano.jpeg">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snacks -->
+                <div class="menu-item" data-category="snacks">
+                    <div class="item-image">
+                        <img src="image/chocolate chip cookie.jpeg" alt="Chocolate Chip Cookie">
+                        <div class="item-badge">
+                            <i class="fas fa-cookie-bite"></i>
+                            <span>Fresh</span>
+                        </div>
+                        <div class="item-overlay">
+                            <button class="quick-view-btn" data-item="Chocolate Chip Cookie">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <h3 class="item-name">Chocolate Chip Cookie</h3>
+                        <p class="item-description">Freshly baked with premium chocolate chips</p>
+                        <div class="item-details">
+                            <span class="item-size"><i class="fas fa-weight"></i> 80g</span>
+                            <span class="item-calories"><i class="fas fa-fire"></i> 340 cal</span>
+                        </div>
+                        <div class="item-footer">
+                            <div class="price-section">
+                                <span class="current-price">Rs 180</span>
+                                <span class="original-price">Rs 220</span>
+                                <span class="discount">18% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="Chocolate Chip Cookie" data-price="180" data-image="chocolate chip cookie.jpeg">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Items -->
+                <div class="menu-item" data-category="fooditems">
+                    <div class="item-image">
+                        <img src="image/Grilled Chicken Sandwich.jpeg" alt="Grilled Chicken Sandwich">
+                        <div class="item-badge">
+                            <i class="fas fa-utensils"></i>
+                            <span>Hot</span>
+                        </div>
+                        <div class="item-overlay">
+                            <button class="quick-view-btn" data-item="Grilled Chicken Sandwich">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <h3 class="item-name">Grilled Chicken Sandwich</h3>
+                        <p class="item-description">Tender grilled chicken with fresh vegetables</p>
+                        <div class="item-details">
+                            <span class="item-size"><i class="fas fa-weight"></i> 250g</span>
+                            <span class="item-calories"><i class="fas fa-fire"></i> 420 cal</span>
+                        </div>
+                        <div class="item-footer">
+                            <div class="price-section">
+                                <span class="current-price">Rs 680</span>
+                                <span class="original-price">Rs 850</span>
+                                <span class="discount">20% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="Grilled Chicken Sandwich" data-price="680" data-image="Grilled Chicken Sandwich.jpeg">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more items here in the same format -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>Load More Items</span>
+                </button>
+            </div>
         </div>
-        <div class="box">
-            <img src="image/macchiato.jpg" alt="">
-            <h3>macchiato</h3>
-            <div class="price">Rs 1500 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+    </section>
+
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="image/logo.png" alt="JavaJunction">
+                    <h3>JavaJunction</h3>
+                </div>
+                <p>Creating perfect coffee moments since 1941. Quality, passion, and excellence in every cup.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Brew City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@javajunction.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <div class="opening-hours">
+                    <p><strong>Mon - Fri:</strong> 6:00 AM - 10:00 PM</p>
+                    <p><strong>Saturday:</strong> 7:00 AM - 11:00 PM</p>
+                    <p><strong>Sunday:</strong> 8:00 AM - 9:00 PM</p>
+                </div>
+            </div>
         </div>
-        <div class="box">
-            <img src="image/Best-Blueberry-Coffee.jpg" alt="">
-            <h3>Best-Blueberry</h3>
-            <div class="price">Rs 1500 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 JavaJunction. All rights reserved. | Designed with ❤️ for coffee lovers</p>
         </div>
-        <div class="box">
-            <img src="image/flat-white.jpg" alt="">
-            <h3>flat-white</h3>
-            <div class="price">Rs 1500 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quick-view-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-item-image" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-item-name"></h3>
+                    <div class="modal-rating">
+                        <div class="stars" id="modal-stars"></div>
+                        <span id="modal-rating-text"></span>
+                    </div>
+                    <p id="modal-item-description"></p>
+                    <div class="modal-nutritional-info">
+                        <h4>Nutritional Information</h4>
+                        <div class="nutrition-grid">
+                            <div class="nutrition-item">
+                                <span>Calories</span>
+                                <span id="modal-calories"></span>
+                            </div>
+                            <div class="nutrition-item">
+                                <span>Size</span>
+                                <span id="modal-size"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-price">
+                            <span class="current-price" id="modal-current-price"></span>
+                            <span class="original-price" id="modal-original-price"></span>
+                        </div>
+                        <button class="modal-add-to-cart" id="modal-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
- menu end-->
- <section class="menu" id="menu">
-    <h1 class="heading">Our <span>Menu</span></h1>
 
-    <nav class="category">
-        <a href="#" data-category="all">All</a>
-        <a href="#" data-category="beverages">Beverage</a>
-        <a href="#" data-category="snacks">Snacks</a>
-        <a href="#" data-category="fooditems">Food Items</a>
-        <a href="#" data-category="addons">Add-ons</a>
-        <a href="#" data-category="otheritems">Other items</a>
-    </nav>
-
-    <div class="box-container">
-        <div class="box" data-category="beverages" data-item="Hot Mocha Latte">
-            <img src="../image/Hot Mocha Latte.webp">
-            <h3>Hot Mocha Latte</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Hot Mocha Latte">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Salted Caramel Macchiato">
-            <img src="../image/Salted Caramel Macchiato.jpeg">
-            <h3>Salted Caramel Macchiato</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Salted Caramel Macchiato">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Hot Mocha Latte">
-            <img src="../image/Hot Mocha Latte.webp">
-            <h3>Hot Mocha Latte</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Hot Mocha Latte">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Iced Mocha">
-            <img src="../image/Iced Mocha.jpeg">
-            <h3>Iced Mocha</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Iced Mocha">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Iced Americano">
-            <img src="../image/Iced Americano.jpeg">
-            <h3>Iced Americano</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Iced Americano">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Cold Brew Coffee">
-            <img src="../image/Cold Brew Coffee.webp">
-            <h3>Cold Brew Coffee</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Cold Brew Coffee">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Maple Brown Sugar Latte">
-            <img src="../image/Maple Brown Sugar Latte.jpeg">
-            <h3>Maple Brown Sugar Latte</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Maple Brown Sugar Latte">add to cart</a>
-        </div>
-        <div class="box" data-category="beverages" data-item="Caffe Mocha Magic">
-            <img src="../image/Caffe Mocha Magic.jpeg">
-            <h3>Caffe Mocha Magic</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Caffe Mocha Magic">add to cart</a>
-        </div>
-        <div class="box" data-category="snacks" data-item="Chocolate Chip Cookie">
-            <img src="../image/chocolate chip cookie.jpeg">
-            <h3>Chocolate Chip Cookie</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Chocolate Chip Cookie">add to cart</a>
-        </div>
-        <div class="box" data-category="snacks" data-item="Doughnuts">
-            <img src="../image/Doughnut.jpg">
-            <h3>Doughnuts</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Doughnuts">add to cart</a>
-        </div>
-        <div class="box" data-category="snacks" data-item="Peanut Butter Brownies">
-            <img src="../image/Peanut Butter Brownies.jpeg">
-            <h3>Peanut Butter Brownies</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Peanut Butter Brownies">add to cart</a>
-        </div>
-        <div class="box" data-category="snacks" data-item="Sea Salt Caramel Fudge">
-            <img src="../image/Sea Salt Caramel Fudge.jpeg">
-            <h3>Sea Salt Caramel Fudge</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Sea Salt Caramel Fudge">add to cart</a>
-        </div>
-        <div class="box" data-category="snacks" data-item="Dark Chocolate Walnut Truffle">
-            <img src="../image/Dark Chocolate Walnut Truffle.jpeg">
-            <h3>Dark Chocolate Walnut Truffle</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Dark Chocolate Walnut Truffle">add to cart</a>
-        </div>
-        <div class="box" data-category="snacks" data-item="Chocolate Glazed Donuts">
-            <img src="../image/Chocolate Glazed Donuts.jpeg">
-            <h3>Chocolate Glazed Donuts</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Chocolate Glazed Donuts">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Bread Omelette Sandwich">
-            <img src="../image/bread-omelet-sandwich-recipe.jpg">
-            <h3>Bread Omelette Sandwich</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Bread Omelette Sandwich">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Grilled Chicken Sandwich">
-            <img src="../image/Grilled Chicken Sandwich.jpeg">
-            <h3>Grilled Chicken Sandwich</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Grilled Chicken Sandwich">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Grilled Chicken Wrap">
-            <img src="../image/Grilled Chicken Wrap.jpeg">
-            <h3>Grilled Chicken Wrap</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Grilled Chicken Wrap">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Black Forest cake">
-            <img src="../image/Black Forest cake.jpeg">
-            <h3>Black Forest cake</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Black Forest cake">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Carrot Cupcake">
-            <img src="../image/Carrot Cupcake.jpeg">
-            <h3>Carrot Cupcake</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Carrot Cupcake">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Chocolate Cupcake">
-            <img src="../image/Chocolate Cupcake.jpeg">
-            <h3>Chocolate Cupcake</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Chocolate Cupcake">add to cart</a>
-        </div>
-        <div class="box" data-category="addons" data-item="Whipped Cream">
-            <img src="../image/Whipped Cream.jpeg">
-            <h3>Whipped Cream</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Whipped Cream">add to cart</a>
-        </div>
-        <div class="box" data-category="addons" data-item="Cocoa Powder">
-            <img src="Best Cocoa Powder for Baking - Salt & Baker.jpg">
-            <h3>Cocoa Powder</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Cocoa Powder">add to cart</a>
-        </div>
-
-        <div class="box" data-category="addons" data-item="Whipped Cream">
-            <img src="Whipped cream (Chantilly cream).jpg">
-            <h3>Whipped Cream</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Whipped Cream">add to cart</a>
-        </div>
-
-        <div class="box" data-category="otheritems" data-item="Fresh Pistachios">
-            <img src="Raw Organic Green Fresh Pistachios Raw Organic Green Fresh Pistachios in a Bowl.jpg">
-            <h3>Fresh Pistachios</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Fresh Pistachios">add to cart</a>
-        </div>
-        <div class="box" data-category="fooditems" data-item="Vegetable Soup">
-            <img src="../image/Vegetable Soup.jpeg">
-            <h3>Vegetable Soup</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Vegetable Soup">add to cart</a>
-        </div>
-        <div class="box" data-category="otheritems" data-item="Coffee Bean">
-            <img src="../image/Coffee Bean.jpeg">
-            <h3>Coffee Bean</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Coffee Bean">add to cart</a>
-        </div>
-        <div class="box" data-category="otheritems" data-item="Raw Cashew Nuts">
-            <img src="../image/Raw Cashew Nuts.jpeg">
-            <h3>Raw Cashew Nuts</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Raw Cashew Nuts">add to cart</a>
-        </div>
-        <div class="box" data-category="otheritems" data-item="Chicken Noodle Soup">
-            <img src="../image/Chicken Noodle Soup.jpeg">
-            <h3>Chicken Noodle Soup</h3>
-            <div class="price">Rs.480 <span>Rs.600</span></div>
-            <a href="#" class="btn add-to-cart" data-item="Chicken Noodle Soup">add to cart</a>
-        </div>
-    </div>
-</section>
-
-
-<footer class="footer">
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
-    </div>
-   
-    <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div>
-</footer>
-
-
+    <!-- Scripts -->
+    <script src="js/header.js"></script>
     <script src="JS/script.js"></script>
-    <script src="JS/catogery.js"></script> 
+    <script src="js/menu.js"></script>
 </body>
 </html>
