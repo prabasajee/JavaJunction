@@ -509,20 +509,105 @@
     </section>
 
 
-<footer class="footer">
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="image/logo.png" alt="JavaJunction">
+                    <h3>JavaJunction</h3>
+                </div>
+                <p>Creating perfect coffee moments since 1941. Quality, passion, and excellence in every cup.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Brew City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@javajunction.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <div class="opening-hours">
+                    <p><strong>Mon - Fri:</strong> 6:00 AM - 10:00 PM</p>
+                    <p><strong>Saturday:</strong> 7:00 AM - 11:00 PM</p>
+                    <p><strong>Sunday:</strong> 8:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 JavaJunction. All rights reserved. | Designed with ❤️ for coffee lovers</p>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quick-view-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-item-image" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-item-name"></h3>
+                    <div class="modal-rating">
+                        <div class="stars" id="modal-stars"></div>
+                        <span id="modal-rating-text"></span>
+                    </div>
+                    <p id="modal-item-description"></p>
+                    <div class="modal-nutritional-info">
+                        <h4>Nutritional Information</h4>
+                        <div class="nutrition-grid">
+                            <div class="nutrition-item">
+                                <span>Calories</span>
+                                <span id="modal-calories"></span>
+                            </div>
+                            <div class="nutrition-item">
+                                <span>Size</span>
+                                <span id="modal-size"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-price">
+                            <span class="current-price" id="modal-current-price"></span>
+                            <span class="original-price" id="modal-original-price"></span>
+                        </div>
+                        <button class="modal-add-to-cart" id="modal-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   
-    <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div>
-</footer>
 
-
+    <!-- Scripts -->
+    <script src="js/header.js"></script>
     <script src="JS/script.js"></script>
-    <script src="JS/catogery.js"></script> 
+    <script src="js/menu.js"></script>
 </body>
 </html>
