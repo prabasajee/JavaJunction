@@ -230,52 +230,54 @@ document.addEventListener('DOMContentLoaded', function() {
         const filteredItems = getFilteredItems();
         const itemsToShow = filteredItems.slice(0, displayedItems);
         
-        menuGrid.innerHTML = itemsToShow.map(item => {
-            const discount = Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100);
-            
-            return `
-                <div class="menu-item" data-category="${item.category}">
-                    <div class="item-image">
-                        <img src="image/${item.image}" alt="${item.name}">
-                        <div class="item-badge ${getBadgeClass(item.badge)}">
-                            <i class="${getBadgeIcon(item.badge)}"></i>
-                            <span>${item.badge.charAt(0).toUpperCase() + item.badge.slice(1)}</span>
-                        </div>
-                        <div class="item-overlay">
-                            <button class="quick-view-btn" data-item='${JSON.stringify(item)}'>
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="favorite-btn">
-                                <i class="far fa-heart"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-rating">
-                            ${generateStars(item.rating)}
-                            <span class="rating-text">(${item.rating})</span>
-                        </div>
-                        <h3 class="item-name">${item.name}</h3>
-                        <p class="item-description">${item.description}</p>
-                        <div class="item-details">
-                            <span class="item-size"><i class="fas fa-coffee"></i> ${item.size}</span>
-                            <span class="item-calories"><i class="fas fa-fire"></i> ${item.calories} cal</span>
-                        </div>
-                        <div class="item-footer">
-                            <div class="price-section">
-                                <span class="current-price">Rs ${item.price}</span>
-                                <span class="original-price">Rs ${item.originalPrice}</span>
-                                <span class="discount">${discount}% OFF</span>
+        if (menuGrid) {
+            menuGrid.innerHTML = itemsToShow.map(item => {
+                const discount = Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100);
+                
+                return `
+                    <div class="menu-item" data-category="${item.category}">
+                        <div class="item-image">
+                            <img src="image/${item.image}" alt="${item.name}">
+                            <div class="item-badge ${getBadgeClass(item.badge)}">
+                                <i class="${getBadgeIcon(item.badge)}"></i>
+                                <span>${item.badge.charAt(0).toUpperCase() + item.badge.slice(1)}</span>
                             </div>
-                            <button class="add-to-cart-btn" data-item="${item.name}" data-price="${item.price}" data-image="${item.image}">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Add to Cart</span>
-                            </button>
+                            <div class="item-overlay">
+                                <button class="quick-view-btn" data-item='${JSON.stringify(item)}'>
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="favorite-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-rating">
+                                ${generateStars(item.rating)}
+                                <span class="rating-text">(${item.rating})</span>
+                            </div>
+                            <h3 class="item-name">${item.name}</h3>
+                            <p class="item-description">${item.description}</p>
+                            <div class="item-details">
+                                <span class="item-size"><i class="fas fa-coffee"></i> ${item.size}</span>
+                                <span class="item-calories"><i class="fas fa-fire"></i> ${item.calories} cal</span>
+                            </div>
+                            <div class="item-footer">
+                                <div class="price-section">
+                                    <span class="current-price">Rs ${item.price}</span>
+                                    <span class="original-price">Rs ${item.originalPrice}</span>
+                                    <span class="discount">${discount}% OFF</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-item="${item.name}" data-price="${item.price}" data-image="${item.image}">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            `;
-        }).join('');
+                `;
+            }).join('');
+        }
 
         // Show/hide load more button
         if (loadMoreBtn) {
@@ -333,25 +335,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open quick view modal
     function openQuickView(item) {
         const modal = document.getElementById('quick-view-modal');
+        if (!modal) return;
+        
         const discount = Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100);
         
         // Populate modal content
-        document.getElementById('modal-item-image').src = `image/${item.image}`;
-        document.getElementById('modal-item-name').textContent = item.name;
-        document.getElementById('modal-stars').innerHTML = generateStars(item.rating);
-        document.getElementById('modal-rating-text').textContent = `(${item.rating})`;
-        document.querySelector('#quick-view-modal p').textContent = item.description;
-        document.getElementById('modal-calories').textContent = `${item.calories} cal`;
-        document.getElementById('modal-size').textContent = item.size;
-        document.getElementById('modal-current-price').textContent = `Rs ${item.price}`;
-        document.getElementById('modal-original-price').textContent = `Rs ${item.originalPrice}`;
+        const modalImage = document.getElementById('modal-item-image');
+        const modalName = document.getElementById('modal-item-name');
+        const modalStars = document.getElementById('modal-stars');
+        const modalRating = document.getElementById('modal-rating-text');
+        const modalDescription = document.querySelector('#quick-view-modal p');
+        const modalCalories = document.getElementById('modal-calories');
+        const modalSize = document.getElementById('modal-size');
+        const modalCurrentPrice = document.getElementById('modal-current-price');
+        const modalOriginalPrice = document.getElementById('modal-original-price');
+        
+        if (modalImage) modalImage.src = `image/${item.image}`;
+        if (modalName) modalName.textContent = item.name;
+        if (modalStars) modalStars.innerHTML = generateStars(item.rating);
+        if (modalRating) modalRating.textContent = `(${item.rating})`;
+        if (modalDescription) modalDescription.textContent = item.description;
+        if (modalCalories) modalCalories.textContent = `${item.calories} cal`;
+        if (modalSize) modalSize.textContent = item.size;
+        if (modalCurrentPrice) modalCurrentPrice.textContent = `Rs ${item.price}`;
+        if (modalOriginalPrice) modalOriginalPrice.textContent = `Rs ${item.originalPrice}`;
         
         // Set up modal add to cart button
         const modalAddToCart = document.getElementById('modal-add-to-cart');
-        modalAddToCart.onclick = () => {
-            addToCart(item.name, item.price, item.image);
-            closeQuickView();
-        };
+        if (modalAddToCart) {
+            modalAddToCart.onclick = () => {
+                addToCart(item.name, item.price, item.image);
+                closeQuickView();
+            };
+        }
         
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -360,8 +376,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close quick view modal
     function closeQuickView() {
         const modal = document.getElementById('quick-view-modal');
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
 
     // Add to cart function
@@ -432,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close modal on escape key
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && quickViewModal.classList.contains('active')) {
+        if (e.key === 'Escape' && quickViewModal && quickViewModal.classList.contains('active')) {
             closeQuickView();
         }
     });
