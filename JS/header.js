@@ -1,5 +1,6 @@
 // Enhanced Header Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Header script loaded'); // Debug log
     
     // Get header elements
     const header = document.querySelector('.header');
@@ -12,6 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const cartCount = document.querySelector('.cart-count');
+
+    // Debug: Log element existence
+    console.log('Elements found:', {
+        header: !!header,
+        searchBtn: !!searchBtn,
+        searchForm: !!searchForm,
+        cartBtn: !!cartBtn,
+        cartDropdown: !!cartDropdown,
+        userBtn: !!userBtn,
+        userDropdown: !!userDropdown,
+        mobileMenuBtn: !!mobileMenuBtn,
+        mobileNav: !!mobileNav
+    });
 
     // Header scroll effect
     let lastScrollY = window.scrollY;
