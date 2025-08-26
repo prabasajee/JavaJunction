@@ -616,6 +616,182 @@ p {
     text-align: justify; /* Justify text for better layout */
 }
 
+/* Statistics Section */
+.stats {
+    padding: 8rem 7% 5rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../image/coffee-beans-bg.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    color: var(--main-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(26, 26, 26, 0.8);
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(211, 173, 127, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.stat-item:hover::before {
+    left: 100%;
+}
+
+.stat-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(211, 173, 127, 0.2);
+}
+
+.stat-icon {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.2) rotateY(360deg);
+}
+
+.stat-number {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.stat-number::after {
+    content: '+';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    font-size: 3rem;
+    color: var(--main-color);
+    opacity: 0;
+    animation: fadeInPlus 0.5s ease forwards;
+    animation-delay: 2s;
+}
+
+.stat-label {
+    font-size: 1.8rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Counter Animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInPlus {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stat-number.animate {
+    animation: countUp 0.8s ease;
+}
+
+/* Responsive Design for Stats */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+    }
+    
+    .stat-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item {
+        padding: 2rem 1rem;
+    }
+}
+
 /* Keyframe Animations */
 @keyframes fadeIn {
     0% {
