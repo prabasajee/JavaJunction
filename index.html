@@ -3,11 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaJunction</title>
+    <title>JavaJunction - Premium Coffee Experience Since 1941</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="JavaJunction - Experience premium coffee since 1941. Fresh coffee, organic beans, 24/7 service. Order online for delivery or visit our locations in the city.">
+    <meta name="keywords" content="coffee, premium coffee, JavaJunction, fresh coffee, organic beans, coffee delivery, espresso, americano, coffee shop">
+    <meta name="author" content="JavaJunction">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="JavaJunction - Premium Coffee Experience Since 1941">
+    <meta property="og:description" content="Start your day right with our freshly brewed premium coffee. Family-owned since 1941, serving the city with high-quality coffee and exceptional service.">
+    <meta property="og:image" content="image/logo.png">
+    <meta property="og:url" content="https://javajunction.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="JavaJunction">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JavaJunction - Premium Coffee Experience">
+    <meta name="twitter:description" content="Fresh coffee, organic beans, 24/7 service since 1941.">
+    <meta name="twitter:image" content="image/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="image/icons8 (2).png" type="image/png">
+    <link rel="apple-touch-icon" href="image/icons8 (2).png">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/logo.css" />
-    <link rel="icon" href="image/icons8 (2).png" />
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "JavaJunction",
+        "description": "Premium coffee shop serving fresh coffee since 1941. Family-owned business dedicated to high-quality coffee and exceptional service.",
+        "url": "https://javajunction.com",
+        "telephone": "+1-234-567-8900",
+        "email": "info@javajunction.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Coffee Street",
+            "addressLocality": "Coffee City",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.7128",
+            "longitude": "-74.0060"
+        },
+        "openingHours": [
+            "Mo-Su 06:00-23:00"
+        ],
+        "priceRange": "$$",
+        "servesCuisine": "Coffee, Beverages, Light Meals",
+        "foundingDate": "1941",
+        "founder": {
+            "@type": "Person",
+            "name": "Carlos Ramírez"
+        },
+        "sameAs": [
+            "https://www.facebook.com/javajunction",
+            "https://www.instagram.com/javajunction",
+            "https://www.twitter.com/javajunction"
+        ]
+    }
+    </script>
 </head>
 <body>
     
@@ -110,13 +180,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="product.html" class="nav-link">
-                            <i class="fas fa-box"></i>
-                            <span>Products</span>
+                        <a href="#about" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="service.html" class="nav-link">
+                        <a href="#services" class="nav-link">
                             <i class="fas fa-concierge-bell"></i>
                             <span>Services</span>
                         </a>
@@ -176,8 +246,8 @@
                             <span>Welcome, Guest!</span>
                         </div>
                         <ul class="user-menu">
-                            <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
-                            <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                            <li><a href="#sign-in" onclick="showSignInModal()"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                            <li><a href="#sign-up" onclick="showSignUpModal()"><i class="fas fa-user-plus"></i> Sign Up</a></li>
                             <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
                             <li><a href="#"><i class="fas fa-history"></i> Order History</a></li>
                         </ul>
@@ -203,12 +273,12 @@
                 <ul class="mobile-nav-menu">
                     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="menu.html"><i class="fas fa-coffee"></i> Menu</a></li>
-                    <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
-                    <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
                     <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
                     <li class="divider"></li>
-                    <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
-                    <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                    <li><a href="#sign-in" onclick="showSignInModal()"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                    <li><a href="#sign-up" onclick="showSignUpModal()"><i class="fas fa-user-plus"></i> Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -255,7 +325,7 @@
     </section>
 
     <main>
-        <section class="welcome">
+        <section class="welcome" id="about">
          
             <div class="main-area">
                 <div class="section-area">
@@ -277,7 +347,7 @@
                     </div>
                 </div>
                 <div class="section-area">
-                    <div class="section-B">
+                    <div class="section-B" id="services">
                         <div class="box-text">
                             <h1>Our Services</h1>
                             <p>
