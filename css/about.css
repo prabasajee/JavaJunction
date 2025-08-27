@@ -106,10 +106,19 @@
     padding-top: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.about-main .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    min-height: auto !important;
+    display: block !important;
+    flex-direction: initial !important;
+    justify-content: initial !important;
+    align-items: initial !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 /* Section Headers */
@@ -134,24 +143,30 @@
     letter-spacing: 1px;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    color: #2c1810;
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.2;
+.about-main .section-title {
+    font-size: 2.5rem !important;
+    color: #2c1810 !important;
+    margin-bottom: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    text-transform: none !important;
 }
 
-.section-title span {
-    color: #d4a574;
+.about-main .section-title span {
+    color: #d4a574 !important;
 }
 
-.section-description {
-    font-size: 1.1rem;
-    color: #6b4423;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
+.about-main .section-header.centered .section-title {
+    text-align: center !important;
+}
+
+.about-main .section-description {
+    font-size: 1.1rem !important;
+    color: #6b4423 !important;
+    line-height: 1.6 !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
 }
 
 /* Our Story Section */
@@ -272,27 +287,33 @@
 }
 
 /* Our Values Section */
-.our-values {
-    padding: 100px 0;
-    background: white;
+.about-main .our-values {
+    padding: 100px 0 !important;
+    background: white !important;
 }
 
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
+.about-main .our-values .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
 }
 
-.value-card {
-    background: #f8f5f0;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
+.about-main .values-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 40px !important;
+    margin-top: 60px !important;
+}
+
+.about-main .value-card {
+    background: #f8f5f0 !important;
+    padding: 40px 30px !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid transparent !important;
+    position: relative !important;
+    overflow: hidden !important;
 }
 
 .value-card::before {
