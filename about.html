@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/logo.css" />
     <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/logo.css" />
-    <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
     
@@ -471,22 +469,8 @@
             }, observerOptions);
 
             // Observe elements for animation
-            document.querySelectorAll('.value-card, .timeline-item, .team-card, .story-content, .story-image').forEach(el => {
+            document.querySelectorAll('.value-card, .team-card, .story-content, .story-image').forEach(el => {
                 observer.observe(el);
-            });
-
-            // Timeline animation
-            const timelineObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                        timelineObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            document.querySelectorAll('.timeline-item').forEach(item => {
-                timelineObserver.observe(item);
             });
         });
     </script>
