@@ -434,13 +434,6 @@
     <!-- About Page Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize timeline items
-            document.querySelectorAll('.timeline-item').forEach((item, index) => {
-                // Ensure items are visible initially for accessibility
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-            });
-            
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -476,24 +469,8 @@
             }, observerOptions);
 
             // Observe elements for animation
-            document.querySelectorAll('.value-card, .timeline-item, .team-card, .story-content, .story-image').forEach(el => {
+            document.querySelectorAll('.value-card, .team-card, .story-content, .story-image').forEach(el => {
                 observer.observe(el);
-            });
-
-            // Timeline animation
-            const timelineObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('animate');
-                        }, index * 200);
-                        timelineObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            document.querySelectorAll('.timeline-item').forEach(item => {
-                timelineObserver.observe(item);
             });
         });
     </script>

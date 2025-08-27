@@ -423,31 +423,9 @@
 
 .about-main .timeline-item {
     position: relative !important;
-    margin-bottom: 50px !important;
-    opacity: 0 !important;
-    transform: translateY(50px) !important;
-    transition: all 0.6s ease !important;
-}
-
-.about-main .timeline-item.animate {
+    margin-bottom: 80px !important;
     opacity: 1 !important;
     transform: translateY(0) !important;
-}
-
-.about-main .timeline-item:nth-child(odd) .timeline-content {
-    left: 0 !important;
-    right: auto !important;
-    text-align: right !important;
-    padding-right: 40px !important;
-    padding-left: 0 !important;
-}
-
-.about-main .timeline-item:nth-child(even) .timeline-content {
-    right: 0 !important;
-    left: auto !important;
-    text-align: left !important;
-    padding-left: 40px !important;
-    padding-right: 0 !important;
 }
 
 .about-main .timeline-year {
@@ -471,27 +449,44 @@
 
 .about-main .timeline-content {
     position: absolute !important;
-    width: calc(50% - 40px) !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    padding: 30px !important;
-    border-radius: 15px !important;
+    width: calc(50% - 60px) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    padding: 25px !important;
+    border-radius: 12px !important;
     backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     top: 0 !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.about-main .timeline-item:nth-child(odd) .timeline-content {
+    left: 0 !important;
+    right: auto !important;
+    text-align: right !important;
+    padding-right: 30px !important;
+    padding-left: 25px !important;
+}
+
+.about-main .timeline-item:nth-child(even) .timeline-content {
+    right: 0 !important;
+    left: auto !important;
+    text-align: left !important;
+    padding-left: 30px !important;
+    padding-right: 25px !important;
 }
 
 .about-main .timeline-content h3 {
     color: #d4a574 !important;
-    font-size: 1.3rem !important;
-    margin-bottom: 15px !important;
+    font-size: 1.4rem !important;
+    margin-bottom: 12px !important;
     font-weight: 600 !important;
 }
 
 .about-main .timeline-content p {
-    line-height: 1.6 !important;
-    opacity: 0.9 !important;
-    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.7 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
     margin: 0 !important;
+    font-size: 1rem !important;
 }
 
 /* Team Section */
@@ -727,12 +722,12 @@
     }
     
     .about-main .timeline::before {
-        left: 20px !important;
+        left: 30px !important;
         transform: none !important;
     }
     
     .about-main .timeline-year {
-        left: 20px !important;
+        left: 30px !important;
         transform: none !important;
         width: 60px !important;
         height: 60px !important;
@@ -741,9 +736,9 @@
     
     .about-main .timeline-item:nth-child(odd) .timeline-content,
     .about-main .timeline-item:nth-child(even) .timeline-content {
-        left: 80px !important;
+        left: 100px !important;
         right: auto !important;
-        width: calc(100% - 100px) !important;
+        width: calc(100% - 120px) !important;
         text-align: left !important;
         padding: 20px !important;
         padding-left: 20px !important;
