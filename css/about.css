@@ -170,16 +170,22 @@
 }
 
 /* Our Story Section */
-.our-story {
-    padding: 100px 0;
-    background: #f8f5f0;
+.about-main .our-story {
+    padding: 100px 0 !important;
+    background: #f8f5f0 !important;
 }
 
-.story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+.about-main .our-story .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.about-main .story-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 80px !important;
+    align-items: center !important;
 }
 
 .story-content {
@@ -373,22 +379,28 @@
 }
 
 /* Timeline Section */
-.timeline-section {
-    padding: 100px 0;
-    background: #2c1810;
-    color: white;
+.about-main .timeline-section {
+    padding: 100px 0 !important;
+    background: #2c1810 !important;
+    color: white !important;
 }
 
-.timeline-section .section-title {
-    color: white;
+.about-main .timeline-section .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
 }
 
-.timeline-section .section-title span {
-    color: #d4a574;
+.about-main .timeline-section .section-title {
+    color: white !important;
 }
 
-.timeline-section .section-description {
-    color: rgba(255, 255, 255, 0.8);
+.about-main .timeline-section .section-title span {
+    color: #d4a574 !important;
+}
+
+.about-main .timeline-section .section-description {
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .timeline {
@@ -476,16 +488,22 @@
 }
 
 /* Team Section */
-.team-section {
-    padding: 100px 0;
-    background: #f8f5f0;
+.about-main .team-section {
+    padding: 100px 0 !important;
+    background: #f8f5f0 !important;
 }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
+.about-main .team-section .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.about-main .team-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 40px !important;
+    margin-top: 60px !important;
 }
 
 .team-card {
@@ -572,13 +590,19 @@
 }
 
 /* CTA Section */
-.about-cta {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #2c1810 0%, #3d2317 100%);
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+.about-main .about-cta {
+    padding: 100px 0 !important;
+    background: linear-gradient(135deg, #2c1810 0%, #3d2317 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.about-main .about-cta .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
 }
 
 .about-cta::before {
