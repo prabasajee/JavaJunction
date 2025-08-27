@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaJunction Logo Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/logo.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f5f5f5;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .showcase {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .logo-option {
+            margin: 3rem 0;
+            padding: 2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            text-align: center;
+            background: white;
+        }
+        .logo-option h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        .logo-variants {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .variant {
+            text-align: center;
+        }
+        .variant h4 {
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .code-snippet {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+            overflow-x: auto;
+        }
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .color-item {
+            text-align: center;
+        }
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .instructions {
+            background: #e8f4f8;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #8B4513;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase">
+        <h1 style="text-align: center; color: #8B4513; margin-bottom: 2rem;">JavaJunction Logo Showcase</h1>
+        
+        <!-- Color Palette -->
+        <div class="instructions">
+            <h3>Brand Color Palette</h3>
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #8B4513;"></div>
+                    <p><strong>Primary Brown</strong><br>#8B4513</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #D2691E;"></div>
+                    <p><strong>Secondary Orange</strong><br>#D2691E</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #F4A460;"></div>
+                    <p><strong>Accent Tan</strong><br>#F4A460</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #4A2C17;"></div>
+                    <p><strong>Dark Coffee</strong><br>#4A2C17</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 1: Coffee Cup Logo -->
+        <div class="logo-option">
+            <h3>Option 1: Animated Coffee Cup Logo</h3>
+            <div class="logo-variants">
+                <div class="variant">
+                    <div class="logo-container">
+                        <div class="css-logo">
+                            <div class="coffee-cup-logo">
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="coffee-bean"></div>
+                            </div>
+                        </div>
+                        <div class="logo-text-container">
+                            <div class="text-logo">JavaJunction</div>
+                            <div class="tagline">Premium Coffee Experience</div>
+                        </div>
+                    </div>
+                    <h4>Standard Size</h4>
+                </div>
+                <div class="variant logo-small">
+                    <div class="logo-container">
+                        <div class="css-logo">
+                            <div class="coffee-cup-logo">
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                            </div>
+                        </div>
+                        <div class="logo-text-container">
+                            <div class="text-logo">JavaJunction</div>
+                            <div class="tagline">Premium Coffee</div>
+                        </div>
+                    </div>
+                    <h4>Small Size</h4>
+                </div>
+                <div class="variant logo-large">
+                    <div class="logo-container">
+                        <div class="css-logo">
+                            <div class="coffee-cup-logo">
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="coffee-bean"></div>
+                            </div>
+                        </div>
+                        <div class="logo-text-container">
+                            <div class="text-logo">JavaJunction</div>
+                            <div class="tagline">Premium Coffee Experience</div>
+                        </div>
+                    </div>
+                    <h4>Large Size</h4>
+                </div>
+            </div>
+            <div class="code-snippet">
+&lt;div class="logo-container"&gt;
+    &lt;div class="css-logo"&gt;
+        &lt;div class="coffee-cup-logo"&gt;
+            &lt;div class="steam"&gt;&lt;/div&gt;
+            &lt;div class="steam"&gt;&lt;/div&gt;
+            &lt;div class="steam"&gt;&lt;/div&gt;
+            &lt;div class="coffee-bean"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="logo-text-container"&gt;
+        &lt;div class="text-logo"&gt;JavaJunction&lt;/div&gt;
+        &lt;div class="tagline"&gt;Premium Coffee Experience&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- Option 2: Circular Logo -->
+        <div class="logo-option">
+            <h3>Option 2: Circular Badge Logo</h3>
+            <div class="logo-variants">
+                <div class="variant">
+                    <div class="logo-container">
+                        <div class="css-logo">
+                            <div class="circular-logo">
+                                <div class="inner-cup"></div>
+                            </div>
+                        </div>
+                        <div class="logo-text-container">
+                            <div class="text-logo">JavaJunction</div>
+                            <div class="tagline">Premium Coffee Experience</div>
+                        </div>
+                    </div>
+                    <h4>With Text</h4>
+                </div>
+                <div class="variant">
+                    <div class="css-logo">
+                        <div class="circular-logo">
+                            <div class="inner-cup"></div>
+                        </div>
+                    </div>
+                    <h4>Icon Only</h4>
+                </div>
+                <div class="variant logo-large">
+                    <div class="css-logo">
+                        <div class="circular-logo">
+                            <div class="inner-cup"></div>
+                        </div>
+                    </div>
+                    <h4>Large Icon</h4>
+                </div>
+            </div>
+            <div class="code-snippet">
+&lt;div class="css-logo"&gt;
+    &lt;div class="circular-logo"&gt;
+        &lt;div class="inner-cup"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- Option 3: Text Only Logo -->
+        <div class="logo-option">
+            <h3>Option 3: Typography Logo</h3>
+            <div class="logo-variants">
+                <div class="variant">
+                    <div class="logo-text-container">
+                        <div class="text-logo">JavaJunction</div>
+                        <div class="tagline">Premium Coffee Experience</div>
+                    </div>
+                    <h4>Full Text</h4>
+                </div>
+                <div class="variant">
+                    <div class="text-logo">JavaJunction</div>
+                    <h4>Name Only</h4>
+                </div>
+                <div class="variant logo-large">
+                    <div class="logo-text-container">
+                        <div class="text-logo">JavaJunction</div>
+                        <div class="tagline">Premium Coffee Experience</div>
+                    </div>
+                    <h4>Large Size</h4>
+                </div>
+            </div>
+            <div class="code-snippet">
+&lt;div class="logo-text-container"&gt;
+    &lt;div class="text-logo"&gt;JavaJunction&lt;/div&gt;
+    &lt;div class="tagline"&gt;Premium Coffee Experience&lt;/div&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- Implementation Instructions -->
+        <div class="instructions">
+            <h3>Implementation Instructions</h3>
+            <ol>
+                <li><strong>Include the CSS:</strong> Add <code>&lt;link rel="stylesheet" href="css/logo.css"&gt;</code> to your HTML head</li>
+                <li><strong>Include Fonts:</strong> Make sure you have Google Fonts loaded for 'Baloo 2' and 'Roboto'</li>
+                <li><strong>Copy the HTML:</strong> Use any of the code snippets above in your pages</li>
+                <li><strong>Customize:</strong> Modify colors, sizes, or animations in the CSS file as needed</li>
+                <li><strong>Responsive:</strong> Use classes like <code>.logo-small</code> or <code>.logo-large</code> for different sizes</li>
+            </ol>
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="instructions">
+            <h3>Recommended Usage</h3>
+            <ul>
+                <li><strong>Header/Navigation:</strong> Use Option 1 (Coffee Cup) with standard size</li>
+                <li><strong>Mobile Menu:</strong> Use Option 2 (Circular) icon only, small size</li>
+                <li><strong>Footer:</strong> Use Option 3 (Typography) with full text</li>
+                <li><strong>Social Media:</strong> Use Option 2 (Circular) large size as profile picture</li>
+                <li><strong>Favicon:</strong> Use simplified version of Option 2 (Circular)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
