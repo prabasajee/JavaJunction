@@ -325,57 +325,240 @@
     </section>
 
     <main>
-        <section class="welcome" id="about">
-         
-            <div class="main-area">
-                <div class="section-area">
-                    <div class="section-A">
-                        <div class="box-text">
-                            <h1>Who We Are</h1>
-                            <p>
-                                Our family at JavaJunction has been providing the best coffee in
-                                the city since it was founded by our grandfather, Carlos
-                                Ramírez, in 1941. His patented coffee beans are crafted to
-                                have the perfect ingredients, texture, and flavor. To continue
-                                his legacy, we are dedicated to serving the city with our
-                                grandfather's high-quality coffee.
-                            </p>
-                        </div>
-                        <div class="box-img">
-                            <img src="image/who-we-are.jpg" alt="JavaJunction coffee shop interior showing our warm, welcoming atmosphere where families have enjoyed premium coffee since 1941">
+        <!-- About Section -->
+        <section class="welcome about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Coffee Story</h2>
+                    <p class="section-subtitle">Four generations of passion, dedication, and the perfect cup</p>
+                </div>
+                
+                <div class="main-area">
+                    <div class="section-area fade-in-up">
+                        <div class="section-A about-content">
+                            <div class="box-text content-text">
+                                <div class="content-badge">
+                                    <i class="fas fa-award"></i>
+                                    <span>Est. 1941</span>
+                                </div>
+                                <h3>Who We Are</h3>
+                                <p class="lead-text">
+                                    Our family at JavaJunction has been crafting exceptional coffee experiences for over eight decades.
+                                </p>
+                                <p>
+                                    Founded by our grandfather, Carlos Ramírez, in 1941, JavaJunction began as a small neighborhood coffee shop with a big dream: to serve the perfect cup of coffee. Carlos's innovative approach to coffee roasting and his commitment to quality quickly made JavaJunction a beloved destination.
+                                </p>
+                                <p>
+                                    Today, we continue his legacy with the same passion and dedication, using his time-tested methods while embracing modern techniques to bring you coffee that's both traditional and contemporary.
+                                </p>
+                                
+                                <div class="heritage-highlights">
+                                    <div class="highlight-item">
+                                        <i class="fas fa-seedling"></i>
+                                        <div>
+                                            <h4>Sustainable Sourcing</h4>
+                                            <p>Direct partnerships with coffee farmers worldwide</p>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-fire"></i>
+                                        <div>
+                                            <h4>Traditional Roasting</h4>
+                                            <p>Small-batch roasting using Carlos's original methods</p>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-heart"></i>
+                                        <div>
+                                            <h4>Community Focus</h4>
+                                            <p>Supporting local communities and coffee culture</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="cta-buttons">
+                                    <a href="#services" class="btn primary-btn">
+                                        <span>Discover Our Services</span>
+                                        <i class="fas fa-arrow-down"></i>
+                                    </a>
+                                    <a href="contact.html" class="btn secondary-btn">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Visit Our Locations</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-img image-container">
+                                <img src="image/who-we-are.jpg" alt="JavaJunction coffee shop interior showing our warm, welcoming atmosphere where families have enjoyed premium coffee since 1941" loading="lazy">
+                                <div class="image-overlay">
+                                    <div class="overlay-content">
+                                        <h4>84 Years of Excellence</h4>
+                                        <p>From grandfather to grandchildren, the passion continues</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="section-area">
-                    <div class="section-B" id="services">
-                        <div class="box-text">
-                            <h1>Our Services</h1>
-                            <p>
-                                We provide the best quality coffee, comfort, and respect to
-                                all customers. We also have services ranging from hosting
-                                events such as karaoke, birthday parties, and game nights, as
-                                well as providing free 24/7 parking.
-                            </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What We Offer</h2>
+                    <p class="section-subtitle">Premium coffee experiences tailored to your needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon">
+                            <i class="fas fa-coffee"></i>
                         </div>
-                        <div class="box-img">
-                            <img src="image/services-bg.jpg" alt="JavaJunction services including premium coffee, event hosting, catering, and 24/7 customer service">
+                        <div class="service-content">
+                            <h3>Premium Coffee</h3>
+                            <p>Experience our signature blends and single-origin coffees, expertly crafted by our master baristas using traditional and modern brewing methods.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> 20+ Coffee Varieties</li>
+                                <li><i class="fas fa-check"></i> Expert Barista Service</li>
+                                <li><i class="fas fa-check"></i> Custom Brewing Methods</li>
+                                <li><i class="fas fa-check"></i> Organic & Fair Trade Options</li>
+                            </ul>
+                            <a href="menu.html" class="service-btn">View Menu</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="image/services-bg.jpg" alt="JavaJunction premium coffee service" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Event Hosting</h3>
+                            <p>Host your special occasions in our welcoming atmosphere. From intimate gatherings to corporate events, we provide the perfect setting.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Private Event Spaces</li>
+                                <li><i class="fas fa-check"></i> Karaoke & Entertainment</li>
+                                <li><i class="fas fa-check"></i> Birthday Party Packages</li>
+                                <li><i class="fas fa-check"></i> Corporate Meeting Rooms</li>
+                            </ul>
+                            <a href="contact.html" class="service-btn">Book Event</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="image/services-bg.jpg" alt="JavaJunction event hosting services" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Delivery & Catering</h3>
+                            <p>Enjoy our premium coffee anywhere with our fast delivery service and comprehensive catering options for all occasions.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> 24/7 Delivery Service</li>
+                                <li><i class="fas fa-check"></i> Corporate Catering</li>
+                                <li><i class="fas fa-check"></i> Event Coffee Stations</li>
+                                <li><i class="fas fa-check"></i> Free Parking Available</li>
+                            </ul>
+                            <a href="menu.html" class="service-btn">Order Now</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="image/services-bg.jpg" alt="JavaJunction delivery and catering services" loading="lazy">
                         </div>
                     </div>
                 </div>
-                <div class="section-area">
-                    <div class="section-C">
-                        <div class="box-text">
-                            <h1>Menu</h1>
-                            <p>
-                                Our menu is guaranteed to contain the morning coffee you need
-                                to start your day. From our classic Caffè Americano to four
-                                types of Roast or one of our Espressos, you will find
-                                something to get the morning energy you need while enjoying
-                                every sip.
-                            </p>
+            </div>
+        </section>
+
+        <!-- Menu Preview Section -->
+        <section class="menu-preview-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Taste Our Signature Blends</h2>
+                    <p class="section-subtitle">From classic favorites to innovative creations, discover the perfect cup for every moment</p>
+                </div>
+                
+                <div class="menu-preview-content">
+                    <div class="menu-description fade-in-up">
+                        <div class="content-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Signature Menu</span>
                         </div>
-                        <div class="box-img">
-                            <img src="image/menu-bg.jpg" alt="JavaJunction coffee menu featuring premium espresso, americano, cappuccino and specialty coffee blends">
+                        <h3>Coffee Perfection</h3>
+                        <p class="lead-text">
+                            Our menu is carefully curated to provide the morning energy you need while delivering an exceptional taste experience.
+                        </p>
+                        <p>
+                            From our classic Caffè Americano that started it all, to our four distinct roast profiles and premium espresso selections, every cup is crafted with precision and passion. Whether you prefer light, medium, dark, or our signature roast, you'll find the perfect coffee to energize your day.
+                        </p>
+                        
+                        <div class="menu-highlights">
+                            <div class="highlight-grid">
+                                <div class="menu-highlight">
+                                    <i class="fas fa-coffee"></i>
+                                    <h4>Classic Espresso</h4>
+                                    <p>Rich, bold, and perfectly extracted</p>
+                                </div>
+                                <div class="menu-highlight">
+                                    <i class="fas fa-seedling"></i>
+                                    <h4>Organic Blends</h4>
+                                    <p>Sustainably sourced, ethically traded</p>
+                                </div>
+                                <div class="menu-highlight">
+                                    <i class="fas fa-leaf"></i>
+                                    <h4>Seasonal Specials</h4>
+                                    <p>Limited-time flavors and creations</p>
+                                </div>
+                                <div class="menu-highlight">
+                                    <i class="fas fa-fire"></i>
+                                    <h4>Four Roast Levels</h4>
+                                    <p>Light, medium, dark, and signature</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-cta">
+                            <a href="menu.html" class="btn primary-btn large">
+                                <span>Explore Full Menu</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="menu-info">
+                                <p><i class="fas fa-clock"></i> Fresh coffee brewed every 30 minutes</p>
+                                <p><i class="fas fa-award"></i> Award-winning roasting since 1941</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-visual fade-in-up">
+                        <div class="menu-image-container">
+                            <img src="image/menu-bg.jpg" alt="JavaJunction coffee menu featuring premium espresso, americano, cappuccino and specialty coffee blends" loading="lazy">
+                            <div class="menu-overlay">
+                                <div class="popular-items">
+                                    <h4>Today's Favorites</h4>
+                                    <div class="item">
+                                        <span class="item-name">Signature Americano</span>
+                                        <span class="item-price">$3.50</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="item-name">Cappuccino Supreme</span>
+                                        <span class="item-price">$4.25</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="item-name">Carlos's Dark Roast</span>
+                                        <span class="item-price">$3.75</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="coffee-beans-animation">
+                            <div class="coffee-bean">☕</div>
+                            <div class="coffee-bean">☕</div>
+                            <div class="coffee-bean">☕</div>
                         </div>
                     </div>
                 </div>
