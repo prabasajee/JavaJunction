@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/logo.css" />
     <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/logo.css" />
-    <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
     
@@ -436,6 +434,13 @@
     <!-- About Page Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                // Ensure items are visible initially for accessibility
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            });
+            
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -477,13 +482,15 @@
 
             // Timeline animation
             const timelineObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, index * 200);
                         timelineObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { threshold: 0.3 });
 
             document.querySelectorAll('.timeline-item').forEach(item => {
                 timelineObserver.observe(item);
