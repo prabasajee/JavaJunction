@@ -3,159 +3,599 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JavaJunction</title>
+    <title>JavaJunction - Premium Coffee Experience Since 1941</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="JavaJunction - Experience premium coffee since 1941. Fresh coffee, organic beans, 24/7 service. Order online for delivery or visit our locations in the city.">
+    <meta name="keywords" content="coffee, premium coffee, JavaJunction, fresh coffee, organic beans, coffee delivery, espresso, americano, coffee shop">
+    <meta name="author" content="JavaJunction">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="JavaJunction - Premium Coffee Experience Since 1941">
+    <meta property="og:description" content="Start your day right with our freshly brewed premium coffee. Family-owned since 1941, serving the city with high-quality coffee and exceptional service.">
+    <meta property="og:image" content="image/logo.png">
+    <meta property="og:url" content="https://javajunction.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="JavaJunction">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JavaJunction - Premium Coffee Experience">
+    <meta name="twitter:description" content="Fresh coffee, organic beans, 24/7 service since 1941.">
+    <meta name="twitter:image" content="image/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="image/icons8 (2).png" type="image/png">
+    <link rel="apple-touch-icon" href="image/icons8 (2).png">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" href="../image/icons8 (2).png" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/logo.css" />
+    <link rel="stylesheet" href="css/coffee-education.css" />
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "JavaJunction",
+        "description": "Premium coffee shop serving fresh coffee since 1941. Family-owned business dedicated to high-quality coffee and exceptional service.",
+        "url": "https://javajunction.com",
+        "telephone": "+1-234-567-8900",
+        "email": "info@javajunction.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Coffee Street",
+            "addressLocality": "Coffee City",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.7128",
+            "longitude": "-74.0060"
+        },
+        "openingHours": [
+            "Mo-Su 06:00-23:00"
+        ],
+        "priceRange": "$$",
+        "servesCuisine": "Coffee, Beverages, Light Meals",
+        "foundingDate": "1941",
+        "founder": {
+            "@type": "Person",
+            "name": "Carlos Ramírez"
+        },
+        "sameAs": [
+            "https://www.facebook.com/javajunction",
+            "https://www.instagram.com/javajunction",
+            "https://www.twitter.com/javajunction"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="../image/logo.png" alt="Logo">
-        </a>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="product.html">Products</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div> 
-            <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="Search here...">
-            <label for="search-box" class="fas fa-search"></label>
-        </div>
-        <li class="menu-nav__item">
-            <a href="sign.html" class="sign-in menu-nav__link active">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              Sign In
-            </a>
-            <span class="menu-nav__link" id="slash">/</span>
-            <a href="signup.html" class="sign-up menu-nav__link">
-              Sign Up
-            </a>
-          </li>
-        <div class="cart-items-container">
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p3.png" alt="Cart Item 1">
-                <div class="content">
-                    <h3>Cart Item 01</h3>
-                    <div class="price">Rs 1500</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p4.png" alt="Cart Item 2">
-                <div class="content">
-                    <h3>Cart Item 02</h3>
-                    <div class="price">Rs 1700</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p5.png" alt="Cart Item 3">
-                <div class="content">
-                    <h3>Cart Item 03</h3>
-                    <div class="price">Rs 1700</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="../image/p1.png" alt="Cart Item 4">
-                <div class="content">
-                    <h3>Cart Item 04</h3>
-                    <div class="price">Rs 1400</div>
-                </div>
-            </div>
-            <a href="#" class="btn">Checkout Now</a>
-        </div>
-    </header>
     
-    <!-- Home Section -->
+    <!-- Enhanced Hero Section -->
     <section id="home" class="home">
+        <div class="hero-overlay"></div>
+        <div class="floating-elements">
+            <div class="floating-bean bean-1">☕</div>
+            <div class="floating-bean bean-2">☕</div>
+            <div class="floating-bean bean-3">☕</div>
+            <div class="floating-bean bean-4">☕</div>
+            <div class="floating-bean bean-5">☕</div>
+        </div>
+        
         <div class="content">
-            <h3>Fresh Coffee in the Morning</h3>
-            <p>Start your day right with a cup of our freshly brewed coffee. Whether you’re here for a quick pick-me-up or a leisurely morning, we’re here to make your mornings better.</p>
-            <a href="menu.html" class="btn">Get Yours Now</a>
+            <div class="hero-badge">
+                <span>Since 1941</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Fresh Coffee</span>
+                <span class="title-line highlight">in the Morning</span>
+            </h1>
+            <p class="hero-description">
+                Start your day right with a cup of our freshly brewed coffee. 
+                Whether you're here for a quick pick-me-up or a leisurely morning, 
+                we're here to make your mornings better.
+            </p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn primary-btn">
+                    <span>Get Yours Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="about.html" class="btn secondary-btn">
+                    <i class="fas fa-play"></i>
+                    <span>Watch Story</span>
+                </a>
+            </div>
+            
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Free Delivery</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <span>100% Organic</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Service</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
         </div>
     </section>
 
-    <main>
-        <section class="welcome">
-         
-            <div class="main-area">
-                <div class="section-area">
-                    <div class="section-A">
-                        <div class="box-text">
-                            <h1>Who We Are</h1>
-                            <p>
-                                Our family at Drip Cafe has been providing the best coffee in
-                                the city since it was founded by our grandfather, Carlos
-                                Ramírez, in 1941. His patented coffee beans are crafted to
-                                have the perfect ingredients, texture, and flavor. To continue
-                                his legacy, we are dedicated to serving the city with our
-                                grandfather's high-quality coffee.
-                            </p>
+    <!-- Enhanced Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <a href="#" class="logo">
+                    <div class="logo-container">
+                        <div class="css-logo">
+                            <div class="coffee-cup-logo">
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="coffee-bean"></div>
+                            </div>
                         </div>
-                        <div class="box-img">
-                            <img src="../image/who-we-are.jpg" alt="Who We Are">
+                        <div class="logo-text-container">
+                            <div class="text-logo">JavaJunction</div>
+                            <div class="tagline">Premium Coffee Experience</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                            <i class="fas fa-coffee"></i>
+                            <span>Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-container">
+                    <div class="search-btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search-form" id="search-form">
+                        <input type="search" id="search-box" placeholder="Search coffee, products...">
+                        <button type="submit" class="search-submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="cart-container">
+                    <div class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="cart-dropdown" id="cart-dropdown">
+                        <div class="cart-header">
+                            <h3>Shopping Cart</h3>
+                            <span class="cart-total">Total: Rs 0</span>
+                        </div>
+                        <div class="cart-items-container">
+                            <!-- Cart items will be populated by JavaScript -->
+                        </div>
+                        <div class="cart-footer">
+                            <a href="#" class="btn checkout-btn">Checkout Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="section-area">
-                    <div class="section-B">
-                        <div class="box-text">
-                            <h1>Our Services</h1>
-                            <p>
-                                We provide the best quality coffee, comfort, and respect to
-                                all customers. We also have services ranging from hosting
-                                events such as karaoke, birthday parties, and game nights, as
-                                well as providing free 24/7 parking.
-                            </p>
+
+                <!-- User Account -->
+                <div class="user-container">
+                    <div class="user-btn" id="user-btn">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Welcome, Guest!</span>
                         </div>
-                        <div class="box-img">
-                            <img src="../image/services-bg.jpg" alt="Services">
-                        </div>
+                        <ul class="user-menu">
+                            <li><a href="#sign-in" onclick="showSignInModal()"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                            <li><a href="#sign-up" onclick="showSignUpModal()"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                            <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                            <li><a href="#"><i class="fas fa-history"></i> Order History</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="section-area">
-                    <div class="section-C">
-                        <div class="box-text">
-                            <h1>Menu</h1>
-                            <p>
-                                Our menu is guaranteed to contain the morning coffee you need
-                                to start your day. From our classic Caffè Americano to four
-                                types of Roast or one of our Espressos, you will find
-                                something to get the morning energy you need while enjoying
-                                every sip.
-                            </p>
-                        </div>
-                        <div class="box-img">
-                            <img src="../image/menu-bg.jpg" alt="Menu">
-                        </div>
-                    </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-btn" id="menu-btn">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <div class="mobile-nav-header">
+                    <img src="image/logo.png" alt="JavaJunction Logo - Premium Coffee Since 1941">
+                    <h2>JavaJunction</h2>
+                </div>
+                <ul class="mobile-nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="menu.html"><i class="fas fa-coffee"></i> Menu</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#sign-in" onclick="showSignInModal()"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                    <li><a href="#sign-up" onclick="showSignUpModal()"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Statistics Section -->
+    <section class="stats" id="stats">
+        <div class="stats-container">
+            <h2 class="section-title">Our <span>Achievements</span></h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">Cups Served Daily</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-target="84">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Locations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer class="footer">
         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-            <a href="#" class="fab fa-pinterest"></a>
+            <a href="#" class="fab fa-facebook-f" aria-label="Follow us on Facebook"></a>
+            <a href="#" class="fab fa-twitter" aria-label="Follow us on Twitter"></a>
+            <a href="#" class="fab fa-instagram" aria-label="Follow us on Instagram"></a>
+            <a href="#" class="fab fa-linkedin" aria-label="Follow us on LinkedIn"></a>
+            <a href="#" class="fab fa-pinterest" aria-label="Follow us on Pinterest"></a>
         </div>
-        <div class="credit">Created by <span>Mr. Web Designer</span> | All rights reserved</div>
+        <div class="credit">© 2025 JavaJunction | Premium Coffee Since 1941 | All rights reserved</div>
     </footer>
 
-    <script src="../js/js.js"></script>
-    <script src="../JS/script.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/header.js"></script>
+    
+    <!-- Statistics Counter Animation Script -->
+    <script>
+        // Animated Counter Function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target.toLocaleString();
+                }
+            }
+            updateCounter();
+        }
+
+        // Intersection Observer for triggering animation when section is visible
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    
+                    statNumbers.forEach(statNumber => {
+                        const target = parseInt(statNumber.getAttribute('data-target'));
+                        statNumber.classList.add('animate');
+                        animateCounter(statNumber, target);
+                    });
+                    
+                    // Unobserve after animation to prevent re-triggering
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.querySelector('.stats');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        });
+
+        // Modal functions for sign in/up (placeholder)
+        function showSignInModal() {
+            alert('Sign In modal will be implemented soon!\nFor now, please use the contact page.');
+        }
+
+        function showSignUpModal() {
+            alert('Sign Up modal will be implemented soon!\nFor now, please use the contact page.');
+        }
+
+        // Enhanced scroll animations for main content
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.animationDelay = `${index * 0.2}s`;
+                            entry.target.classList.add('fade-in-up');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.service-card, .about-content, .menu-description, .menu-visual').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Popular items price animation
+        function animatePopularItems() {
+            const prices = document.querySelectorAll('.item-price');
+            prices.forEach((price, index) => {
+                setTimeout(() => {
+                    price.style.animation = 'pulse 1s ease-in-out';
+                }, index * 200);
+            });
+        }
+
+        // Enhanced page initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.querySelector('.stats');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+            
+            // Initialize scroll animations
+            initScrollAnimations();
+            
+            // Animate popular items after a delay
+            setTimeout(animatePopularItems, 2000);
+            
+            // Add smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight || 80;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add pulse animation CSS
+        const pulseStyle = document.createElement('style');
+        pulseStyle.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(pulseStyle);
+
+        // Coffee Education Hub Interactive Features
+        initCoffeeEducationFeatures();
+
+        function initCoffeeEducationFeatures() {
+            // Rotating Coffee Tips
+            const tipCards = document.querySelectorAll('.tip-card');
+            let currentTip = 0;
+
+            function rotateTips() {
+                tipCards.forEach(card => card.classList.remove('active'));
+                tipCards[currentTip].classList.add('active');
+                currentTip = (currentTip + 1) % tipCards.length;
+            }
+
+            // Rotate tips every 4 seconds
+            if (tipCards.length > 0) {
+                setInterval(rotateTips, 4000);
+            }
+
+            // Coffee Type Cards Hover Effects
+            const coffeeCards = document.querySelectorAll('.coffee-type-card');
+            coffeeCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Brewing Cards Animation
+            const brewingCards = document.querySelectorAll('.brewing-card');
+            brewingCards.forEach((card, index) => {
+                card.addEventListener('click', function() {
+                    // Add a "brewing" animation effect
+                    const icon = this.querySelector('.brewing-icon');
+                    icon.style.animation = 'none';
+                    setTimeout(() => {
+                        icon.style.animation = 'brewingAnimation 2s ease-in-out';
+                    }, 10);
+                });
+            });
+
+            // Add brewing animation keyframes
+            const brewingStyle = document.createElement('style');
+            brewingStyle.textContent = `
+                @keyframes brewingAnimation {
+                    0%, 100% { transform: scale(1) rotate(0deg); }
+                    25% { transform: scale(1.1) rotate(90deg); }
+                    50% { transform: scale(1.2) rotate(180deg); }
+                    75% { transform: scale(1.1) rotate(270deg); }
+                }
+                
+                .tip-card.active {
+                    border-color: #d4a574;
+                    background: linear-gradient(135deg, #fff 0%, #f8f5f0 100%);
+                    transform: translateY(-3px);
+                }
+            `;
+            document.head.appendChild(brewingStyle);
+
+            // Origin Cards Flavor Profile Animation
+            const originCards = document.querySelectorAll('.origin-card');
+            originCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const flavorNotes = this.querySelectorAll('.flavor-note');
+                    flavorNotes.forEach((note, index) => {
+                        setTimeout(() => {
+                            note.style.animation = 'pulse 0.6s ease-in-out';
+                        }, index * 100);
+                    });
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const flavorNotes = this.querySelectorAll('.flavor-note');
+                    flavorNotes.forEach(note => {
+                        note.style.animation = 'none';
+                    });
+                });
+            });
+
+            // Intersection Observer for Education Section Animations
+            const educationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = '0.2s';
+                        entry.target.classList.add('fade-in-up');
+                        educationObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observe education sections
+            document.querySelectorAll('.education-section').forEach(section => {
+                educationObserver.observe(section);
+            });
+
+            // Add fade-in-up animation
+            const fadeStyle = document.createElement('style');
+            fadeStyle.textContent = `
+                .fade-in-up {
+                    animation: fadeInUp 0.8s ease-out forwards;
+                }
+                
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            `;
+            document.head.appendChild(fadeStyle);
+        }
+    </script>
 </body>
 </html>

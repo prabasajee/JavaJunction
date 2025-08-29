@@ -1,0 +1,52 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cupGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D2691E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coffeeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2C17;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B3E20;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F4A460;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Coffee Cup Base -->
+  <ellipse cx="40" cy="65" rx="25" ry="8" fill="url(#cupGradient)" opacity="0.8"/>
+  
+  <!-- Coffee Cup -->
+  <path d="M15 25 Q15 20, 20 20 L60 20 Q65 20, 65 25 L65 55 Q65 60, 60 60 L20 60 Q15 60, 15 55 Z" fill="url(#cupGradient)"/>
+  
+  <!-- Coffee Surface -->
+  <ellipse cx="40" cy="22" rx="22" ry="4" fill="url(#coffeeGradient)"/>
+  
+  <!-- Coffee Handle -->
+  <path d="M65 30 Q75 30, 75 40 Q75 50, 65 50" stroke="url(#cupGradient)" stroke-width="4" fill="none"/>
+  
+  <!-- Steam Lines -->
+  <g opacity="0.6">
+    <path d="M25 18 Q27 10, 25 5 Q23 0, 25 -5" stroke="#FFF" stroke-width="2" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 2,-2; -1,-4; 0,-6" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M35 18 Q37 10, 35 5 Q33 0, 35 -5" stroke="#FFF" stroke-width="2" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -1,-2; 2,-4; 0,-6" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M45 18 Q47 10, 45 5 Q43 0, 45 -5" stroke="#FFF" stroke-width="2" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 1,-2; -2,-4; 0,-6" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Coffee Bean -->
+  <ellipse cx="35" cy="40" rx="3" ry="5" fill="#4A2C17" transform="rotate(20 35 40)"/>
+  <line x1="35" y1="37" x2="35" y2="43" stroke="#2C1810" stroke-width="1" transform="rotate(20 35 40)"/>
+  
+  <!-- Text: JavaJunction -->
+  <text x="90" y="35" font-family="'Baloo 2', cursive" font-size="24" font-weight="700" fill="url(#textGradient)">JavaJunction</text>
+  
+  <!-- Tagline -->
+  <text x="90" y="55" font-family="'Roboto', sans-serif" font-size="10" font-weight="400" fill="#8B4513" opacity="0.8">PREMIUM COFFEE EXPERIENCE</text>
+</svg>

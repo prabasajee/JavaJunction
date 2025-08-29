@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const categoryLinks = document.querySelectorAll('.category a');
     const boxes = document.querySelectorAll('.box');
-    const blogs = document.querySelector('.blogs'); // Adjust the selector to match your blogs section
+    const blogs = document.querySelector('.blogs'); // Adjust the selector to match your blogs section   
 
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Remove active class from all links
             categoryLinks.forEach(link => link.classList.remove('active'));
-            
+
             // Add active class to the clicked link
             this.classList.add('active');
 
@@ -30,5 +30,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-

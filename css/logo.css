@@ -1,0 +1,289 @@
+/* JavaJunction CSS Logo Styles */
+
+.css-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+/* Coffee Cup Logo */
+.coffee-cup-logo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #8B4513, #D2691E);
+    border-radius: 0 0 30px 30px;
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        0 4px 8px rgba(0,0,0,0.2);
+    animation: gentle-bounce 3s ease-in-out infinite;
+}
+
+/* Coffee Surface */
+.coffee-cup-logo::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 16px;
+    background: linear-gradient(90deg, #4A2C17, #6B3E20);
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Coffee Handle */
+.coffee-cup-logo::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 15px;
+    width: 12px;
+    height: 20px;
+    border: 3px solid #8B4513;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    background: transparent;
+}
+
+/* Steam Animation */
+.steam {
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 2px;
+    top: -35px;
+    animation: steam-rise 2s ease-in-out infinite;
+}
+
+.steam:nth-child(1) {
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.steam:nth-child(2) {
+    left: 30px;
+    animation-delay: 0.3s;
+}
+
+.steam:nth-child(3) {
+    left: 40px;
+    animation-delay: 0.6s;
+}
+
+/* Coffee Bean Decoration */
+.coffee-bean {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: #4A2C17;
+    border-radius: 50%;
+    top: 20px;
+    left: 25px;
+    transform: rotate(20deg);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.coffee-bean::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 8px;
+    background: #2C1810;
+    border-radius: 1px;
+}
+
+/* Alternative Circular Logo */
+.circular-logo {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #8B4513, #D2691E, #F4A460);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 4px 15px rgba(139, 69, 19, 0.3),
+        inset 0 2px 4px rgba(255,255,255,0.2);
+    border: 3px solid rgba(255,255,255,0.8);
+}
+
+.circular-logo .inner-cup {
+    width: 30px;
+    height: 30px;
+    background: #4A2C17;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+.circular-logo .inner-cup::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 8px;
+    background: #2C1810;
+    border-radius: 12px 12px 0 0;
+}
+
+.circular-logo .inner-cup::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 8px;
+    width: 6px;
+    height: 12px;
+    border: 2px solid #4A2C17;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Text Logo Styles */
+.text-logo {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #8B4513, #D2691E, #F4A460);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: #8B4513;
+    font-weight: 400;
+    margin-top: -5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Combined Logo Layout */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+/* Animations */
+@keyframes gentle-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes steam-rise {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-25px) rotate(10deg);
+    }
+}
+
+/* Hover Effects */
+.css-logo:hover .coffee-cup-logo {
+    transform: scale(1.05);
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.4),
+        0 6px 12px rgba(0,0,0,0.3);
+}
+
+.css-logo:hover .circular-logo {
+    transform: scale(1.05);
+    box-shadow: 
+        0 6px 20px rgba(139, 69, 19, 0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+/* Responsive Sizing */
+.logo-small .css-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-small .coffee-cup-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 0 20px 20px;
+}
+
+.logo-small .circular-logo {
+    width: 45px;
+    height: 45px;
+}
+
+.logo-small .text-logo {
+    font-size: 1.5rem;
+}
+
+.logo-small .tagline {
+    font-size: 0.6rem;
+}
+
+/* Large Logo */
+.logo-large .css-logo {
+    width: 120px;
+    height: 120px;
+}
+
+.logo-large .coffee-cup-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 0 0 45px 45px;
+}
+
+.logo-large .circular-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.logo-large .text-logo {
+    font-size: 3rem;
+}
+
+.logo-large .tagline {
+    font-size: 1rem;
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+    .steam {
+        background: rgba(255,255,255,0.8);
+    }
+    
+    .tagline {
+        color: #D2691E;
+    }
+}
